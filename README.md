@@ -1,2 +1,2 @@
 # TinyGeniusWebsite-OUSL
-An educational content management system for childrens ( 4 - 8 )
+An educational website for childrens ( 4 - 8 )
