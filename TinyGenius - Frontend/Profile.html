@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profile.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+    <title>TinyGenius</title>
+</head>
+<body>
+    <nav>
+        <div>
+            <p id="back"><img src="Assets/profile/right-arrow.png" alt="" id="back-arrow"> Profile</p>
+        </div>
+        <div class="profile">
+            <a href="#"><img src="Assets/grades/woman.png" alt="Profile"></a>
+        </div>
+    </nav>
+
+    <div class="profile-container">
+        <div class="label-container">
+            <label for="Account">Account</label> 
+            <span class="separator"></span>
+        </div>
+        <div class="profile-header">
+            <img src="Assets/grades/woman.png" alt="Profile Picture" class="profile-pic">
+            <div class="profile-buttons">
+                <button class="edit-btn">Edit profile picture</button>
+                <button class="remove-btn">Remove</button>
+            </div>
+        </div>
+    
+        <form class="profile-form">
+            <div class="label-container">
+                <label for="first-name">Full Name</label>
+                <span class="separator"></span>
+            </div>
+            <div class="name-fields">
+                <input type="text" id="first-name" placeholder="First Name">
+                <input type="text" id="last-name" placeholder="Last Name">
+            </div>
+        
+            <div class="label-container">
+                <label for="email">Contact Email</label>
+                <span class="separator"></span>
+            </div>
+            <input type="email" id="email" placeholder="Enter Email">
+        
+            <div class="label-container">
+                <label for="password">Password</label>
+                <span class="separator"></span>
+            </div>
+            <div class="password-fields">
+                <input type="password" id="current-password" placeholder="Current Password">
+                <input type="password" id="new-password" placeholder="New Password">
+            </div>
+            <span class="separator"></span>
+            
+            <button type="submit" class="save-btn">SAVE CHANGES</button>
+        </form>
+        
+        
+    
+    
+</body>
+</html>
