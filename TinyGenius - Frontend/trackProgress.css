@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Inria Sans', sans-serif;
+}
+
+body {
+    background-image: url('Assets/trackProgress/StockCake-Whimsical\ Storybook\ Illustration_1720789194.jpg');
+    background-size: cover;
+    
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(35, 37, 42, 0.8); 
+    z-index: -1;
+}
+
+.container {
+    max-width: 1380px;
+    margin-top: 5%;
+    margin-left: 5%;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    height: 500px;
+    
+}
+
+header {
+    background-color: white; 
+    display: -webkit-flex;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    
+    
+    
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.back-profile a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.back-profile a:hover {
+    color: #000;
+}
+
+.back-arrow {
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.track-progress-btn {
+    background-color: white;
+    border: 2px solid #FCD368;
+    padding: 0.9rem 3rem;
+    border-radius: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 1rem;
+    font-size: 1rem;
+}
+
+.track-progress-btn:hover {
+    background-color: #FCD368;
+    transition: 0.3s;
+}
+
+.profile-picture img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.select-section {
+    padding-top: 4rem;
+    padding-left: 12rem;
+    display: flex;
+
+}
+
+.select-section label {
+    font-size: 1.7rem;
+    padding-top: 0.5rem;
+    padding-right: 15rem;
+    font-style: normal;
+    color: #15373A;
+
+
+}
+
+#grade-btn, #unit-btn {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    padding: 0rem 5rem;
+    font-size: larger;
+    height: 50px;
+    margin-left: 1rem;
+    cursor: pointer;
+    background: #F6F6F6;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+
+}
+
+#grade-btn:hover, #unit-btn:hover {
+    background-color: #e1e1e1;
+}
+
+.progress-bar {
+    display: flex;
+    margin-top: 7rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    width: 58px;
+    height: 59px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    margin: 0 10px;
+    position: relative;
+}
+
+.line {
+    width: 250px;
+    height: 5px;
+    background-color: #e0e0e0;
+}
+
+.circle.active, .line.active {
+    background-color: #6FC1BC;
+}
+
