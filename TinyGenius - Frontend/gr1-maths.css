@@ -1,0 +1,208 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    background-color: #6FA7B3;
+    overflow-x: hidden;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
+/* Navigation Bar */
+nav {
+    background-color: #FCFCFC;
+    padding: 1.875rem; /* 30px */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    height: 0.9375rem; /* 15px */
+}
+
+#logo {
+    margin: 0 54.6875rem 0 -2.5rem; /* 875px, -40px */
+    width: 15.625rem; /* 250px */
+    height: auto;
+    float: left;
+}
+
+.profile img {
+    margin: 0.1875rem 3.75rem 0 0; /* 3px, 60px */
+    border-radius: 100%;
+    width: 3.125rem; /* 50px */
+    height: 3.125rem; /* 50px */
+}
+
+.grade-btns {
+    background-image: url("Assets/landing page assets/StockCake-Whimsical Storybook Illustration_1720789194.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.scroll1 {
+    width: 80%; 
+    height: 60%;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 2.5rem;
+    border-radius: 3.125rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    margin-top: 4.375rem; /* 70px */
+}
+
+.grade-btns-container {
+    text-align: center;
+    color: white;
+}
+
+/* Adjust back button to be centered above MATHS */
+.grade-btns-container h3#back-button {
+    font-size: 1.875rem; /* 30px */
+    margin-bottom: 1rem; /* Space between Grade 01 and MATHS */
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.grade-btns-container h3#back-button:hover {
+    color: #FCD368;
+}
+
+.grade-btns-container h1 {
+    font-size: 6rem; /* Adjust font size as needed */
+    margin: 0;
+}
+
+
+
+
+/* Content Section Styling */
+.content {
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-top: 2rem;
+}
+
+/* Blurred background effect for the heading */
+.content-header {
+    background-color: rgba(0, 0, 0, 0.5); /* Dark transparent overlay */
+    backdrop-filter: blur(10px); /* Blur effect */
+    padding: 1rem;
+    border-radius: 15px;
+    width: 80%;
+    margin: 0 auto 1rem auto;
+    position: relative;
+}
+
+.content-header h2 {
+    font-size: 2.5rem;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+/* Content Item Styling */
+.content-item {
+    background-color: #a3dedc;
+    margin: 1rem auto;
+    width: 80%;
+    padding: 1.5rem;
+    font-size: 1.4rem;
+    color: #15373a;
+    font-weight: bold;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Positions text and arrow at opposite ends */
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.content-item:hover {
+    transform: scale(1.05); /* Subtle zoom effect on hover */
+}
+
+/* Styling for Text and Arrow within Content Item */
+.content-text {
+    margin: 0 auto;
+    text-align: center;
+    flex-grow: 1; /* Center text in the middle */
+}
+
+.arrow {
+    font-size: 1.5rem;
+    margin-left: auto;
+    color: #15373a;
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #f4f4f4;
+    color: #f8cf66;
+    padding: 4.6875rem 1.875rem; /* 75px, 30px */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+footer .footer-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem; /* 10px */
+}
+
+.footer-btns button {
+    background-color: #F5D460;
+    color: #000000;
+    border: none;
+    padding: 0.9375rem 1.875rem; /* 15px, 30px */
+    border-radius: 6.25rem; /* 100px */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 0.9375rem; /* 15px */
+    font-weight: 700;
+}
+
+.footer-btns button:hover {
+    background-color: #F0A500;
+}
+
+.footer-social {
+    display: flex;
+    gap: 0.9375rem; /* 15px */
+}
+
+.footer-social img {
+    width: 2.5rem; /* 40px */
+    height: auto;
+    transition: opacity 0.3s;
+}
+
+/* Footer text */
+footer p {
+    position: absolute;
+    right: 1.875rem; /* 30px */
+    bottom: 0.625rem; /* 10px */
+    font-size: 1.125rem; /* 18px */
+    font-weight: 500;
+    text-align: right;
+}
