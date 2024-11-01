@@ -28,28 +28,30 @@
             <div class="content-header">
                 <h2>Contents</h2>
             </div>
-            <div class="content-item">
+            <div class="content-item" onclick="toggleOptions('alphabet-phonics')">
                 <span class="arrow">▼</span>
                 <span class="content-text">Alphabet and Phonics</span>
+            </div>
+            <div id="alphabet-phonics" class="options" style="display: none;">
+                <div class="option-item" onclick="showGame()">Game</div>
+                <div class="option-item">Quiz</div>
             </div>
             <div class="content-item">
                 <span class="arrow">▼</span>
                 <span class="content-text">Basic Vocabulary</span>
             </div>
-            <div class="content-item">
-                <span class="arrow">▼</span>
-                <span class="content-text">Simple Sentences</span>
-            </div>
-            <div class="content-item">
-                <span class="arrow">▼</span>
-                <span class="content-text">Listening and Speaking</span>
-            </div>
-            <div class="content-item">
-                <span class="arrow">▼</span>
-                <span class="content-text">Reading and Writing Basics</span>
+            <!-- Other content items here -->
+        </section>
+
+        <section id="game-section" class="game-section" style="display: none;">
+            <h2>Alphabet Game</h2>
+            <div id="game-content">
+                <p>Press "Start" to play!</p>
+                <button onclick="startGame()">Start</button>
+                <div id="game-instructions"></div>
+                <input type="text" id="user-input" placeholder="Type the letter here" style="display: none;">
             </div>
         </section>
-        
         
     </main>
     <footer>
@@ -65,5 +67,8 @@
         </div>
         <p>&copy; 2023 Tiny Genius. All rights reserved. Website Designed & Developed by Tiny Genius team</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
+
