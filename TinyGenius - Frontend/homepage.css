@@ -186,6 +186,10 @@ padding-top: 160px;
     line-height: normal;
     
 }
+
+.but:hover {
+    background-color: black;
+}
 .maths {
     position: absolute;
     top: 40%;
