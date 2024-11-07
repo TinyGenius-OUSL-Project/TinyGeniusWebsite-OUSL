@@ -1,0 +1,542 @@
+* {
+    
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #6FC1BC;
+}
+
+.navbar {
+    background-color: #FCFCFC;
+    padding: 30px;
+    position: fixed;
+    width: 100%;
+    height: 45px ;
+    top: 0;
+    z-index: 1000;
+    
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+
+}
+
+.profile {
+    width: 99px;
+    height: 91px;
+    position: absolute;
+    left: 88%;
+    top: 10px;
+    align-items: right;
+    border-radius: 99px;    
+    }
+.background-section{
+    position:relative;
+    background-image: url('assets/Background.png');
+    width: 100%;
+    height: 100vh;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    border-radius: 49px;
+    background: rgba(13, 31, 32, 0.69);
+    width: 793px;
+    height: 409px;
+    top: 200px;
+    left: 70px;
+}
+
+.content h1 {
+color: #FFF;
+font-family: "Inria Sans", sans-serif;
+font-size: 55px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+position: absolute;
+padding-left: 60px;
+padding-top: 50px;
+
+}
+
+.content p {
+color: #FFF;
+font-family: "Inria Sans", sans-serif;;
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+position: absolute;
+padding-left: 60px;
+padding-top: 160px;
+}
+
+.button {
+    color: #000;
+    font-family: "Inria Sans";
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal; 
+    width: 437px;
+    height: 96px;
+    border-radius: 50px;
+    background: #FCD368;
+    box-shadow: 0px 4px 20.2px 0px rgba(0, 0, 0, 0.25);
+    border: none;
+}
+
+.G1{
+    position: absolute;
+  top: 260px;
+  left: 920px;   
+}
+.G2 {
+    position: absolute;
+    top: 370px;
+  left: 920px;  
+}
+.G3 {
+    position: absolute;
+    top: 480px;
+  left: 920px;  
+}
+
+.button:hover {
+    background-color: #ffb907;
+}
+
+.sec2 {
+    
+    
+    width: 100%;
+    height: auto;
+    
+     
+}
+
+.sec2 h1 {
+    color: #FFF;
+    text-align: center;
+    font-family: "Inria Sans";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-top:8%;
+    padding-left: 0%;
+    }
+
+.Maths {
+    width: 604.556px;
+    height: 345.469px;
+    border-radius: 49px;
+    background: url('assets/Maths.png');
+    position: relative;
+    margin-top: 8%;
+    background-size: cover;
+    left: 30%;
+
+}
+.Science {
+    width: 604.556px;
+    height: 345.469px;
+    border-radius: 49px;
+    background: url(assets/Science.png);
+    position: relative;
+    z-index: 2;
+    top: 100px;
+    left:5% ;
+    }
+
+.English {
+    width: 604.556px;
+    height: 345.469px;
+    border-radius: 49px;
+    background: url(assets/English.png);
+    position:relative;
+    z-index: 2;
+    top: -245px;
+    left: 50%;
+    box-sizing: border-box
+
+}
+.but {
+    border-radius: 151px;
+    border: 2px solid #FFF;
+    background: rgba(255, 255, 255, 0.40);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    width: 271.906px;
+    height: 72.286px;
+    color: #FFF;
+    text-align: center;
+    text-shadow: 0px 4px 18.6px rgba(0, 0, 0, 0.25);
+    font-family: "Inria Sans";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    
+}
+.maths {
+    position: absolute;
+    top: 40%;
+    left: 28%;
+}
+.science {
+    position: absolute;
+    top:40%;
+    left: 28%;
+
+}
+.english {
+    position: absolute;
+    top:40%;
+    left: 28%;
+
+}
+
+.sec3 {
+    
+    width: 100%;
+    height:100%;
+    background-color: white;  
+    box-sizing: border-box; 
+}
+
+.sec3 h1 {
+    color: #000;
+    text-align: center;
+    font-family: "Inria Sans";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+    padding-top: 6%;
+    left: 20%;
+}
+
+.sec3 img {
+    width: 529px;
+    height: 530px;
+    position: relative;
+    top: -600px;
+    left: 40px;
+}
+
+.lesson {
+    padding-top: 5%;
+    position: relative;
+    left: 50% ;
+}
+
+.lesson img {
+    width: 68px;
+    height: 74px;
+    position: absolute;
+    left: 0%;
+    top: 180px;
+
+}
+
+.lesson h1 {
+    color: #000;
+    font-family: "Inria Sans";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+    left: -475px;
+    top: -30px;
+    
+}
+
+.lesson p {
+    color: #000;
+    font-family: "Inria Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    top: 5%;
+    left: 115px;
+}
+
+.games {
+    position: relative;
+    left: 50% ;
+}
+
+.games img {
+    width: 80px;
+    height: 58px;
+    position: absolute;
+    left: 0%;
+    top: 150px;
+
+}
+
+.games h1 {
+    color: #000;
+    font-family: "Inria Sans";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+    left: -550px;
+    top: 20px;
+    
+}
+
+.games p {
+    color: #000;
+    font-family: "Inria Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    top: 40px;
+    left: 115px;
+}
+
+.quiz {
+    position: relative;
+    left: 50% ;
+}
+
+.quiz img {
+    width: 79px;
+    height: 77px;
+    position: absolute;
+    left: 0%;
+    top: 200px;
+
+}
+
+.quiz h1 {
+    color: #000;
+    font-family: "Inria Sans";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+    left: -580px;
+    top: 70px;
+    
+}
+
+.quiz p {
+    color: #000;
+    font-family: "Inria Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    top: 100px;
+    left: 115px;
+}
+
+.sec4 {
+    width: 100%;
+    height: 100vh;
+    padding-bottom: 10%;
+}
+
+.sec4 h1 {
+    color: #FFF;
+    text-align: center;
+    font-family: "Inria Sans";
+    font-size: 91px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+    padding-top: 8%;
+}
+
+.printer img {
+    position: relative;
+    left: 15%;
+    margin-top: 10%;
+}
+.printer h1 {
+    color: #FFF;
+    text-align: center;
+    font-family: "Inria Sans";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+    top: -50px;
+    left: 16.5%;
+    text-align: left;
+}
+.Settings {
+    margin: auto;
+}
+
+.Settings img {
+    position: relative;
+    left: 643px;
+    bottom: 368px;
+
+    
+}
+.Settings h1 {
+    color: #FFF;
+    text-align: center;
+    font-family: "Inria Sans";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+    bottom: 420px;
+    left: -17px;
+    text-align: center;
+}
+
+.videos {
+    margin: auto;
+}
+
+.videos img {
+    position: relative;
+    left: 1061px;
+    bottom: 768px;
+
+    
+}
+.videos h1 {
+    color: #FFF;
+    text-align: center;
+    font-family: "Inria Sans";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+    bottom: 830px;
+    left: 26.5%;
+    text-align: center;
+}
+
+.footer {
+   
+    background-color: rgba(0, 54, 58, 0.69);
+}
+
+.about {
+    position: relative;
+    margin-top: 15%;
+    left: 5%;
+    
+
+}
+
+.contact{
+    position: relative;
+    margin-top: 5%;
+    left: 5%;
+
+}
+
+.privacy{
+    position: relative;
+    margin-top: 5%;
+    left: 5%;
+
+}
+
+.facebook:hover {
+    background-color: #ffb907;
+}
+
+.facebook {
+    width: 107px;
+    height: 109px;
+    background-color: #FCD368;
+    border-radius: 50%;
+    position: relative;
+    left: 12%;
+    bottom: 175px;
+    border: none;
+    box-shadow: 1px 4px 27.3px rgba(0, 0, 0, 0.47);
+}
+
+.facebook img {
+    width: 26.25px;
+    height: 50px;
+}
+
+.youtube:hover {
+    background-color: #ffb907;
+}
+
+.youtube{
+    width: 107px;
+    height: 109px;
+    background-color: #FCD368;
+    border-radius: 50%;
+    position: relative;
+    left: 14%;
+    bottom: 175px;
+    border: none;
+    box-shadow: 1px 4px 27.3px rgba(0, 0, 0, 0.47);
+}
+
+.youtube img {
+    width: 60px;
+    height: 60px;
+}
+
+.whatsapp:hover {
+    background-color: #ffb907;
+}
+.whatsapp {
+    width: 107px;
+    height: 109px;
+    background-color: #FCD368;
+    border-radius: 50%;
+    position: relative;
+    left: 16%;
+    bottom: 175px;
+    border: none;
+    box-shadow: 1px 4px 27.3px rgba(0, 0, 0, 0.47);
+}
+
+.whatsapp img {
+    width: 60px;
+    height: 60px;
+}
+
+.footer h1 {
+    color: #FFF;
+    text-align: right;
+    font-family: "Inria Sans";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    bottom: 320px;
+    padding-right: 2%;
+}
+
+
