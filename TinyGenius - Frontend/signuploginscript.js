@@ -109,7 +109,7 @@ const loginForm = document.getElementById("loginForm");
         const result = await response.json();
   
         if (result.status === "success") {
-          // Redirect to homepage on success
+        // redirect home
           window.location.href = result.redirect;
         } else {
           // Display error message
@@ -117,7 +117,7 @@ const loginForm = document.getElementById("loginForm");
           errorMessage.style.display = "block";
         }
       } catch (error) {
-        // Display general error message
+
         errorMessage.textContent = "An error occurred. Please try again.";
         errorMessage.style.display = "block";
       }
