@@ -202,6 +202,7 @@ nav ul li a:hover {
     background-color: #cafdfb;
     padding: 0.625rem; /* 10px */
     display: flex;
+    font-family: "Inria Sans", sans-serif;
 }
 
 .section-character ul {
