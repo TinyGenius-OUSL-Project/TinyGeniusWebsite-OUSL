@@ -3,7 +3,7 @@ html, body {
     padding: 0;
     font-family: "Josefin Sans", sans-serif;
     font-weight: 400;
-    background-color: #6FA7B3;
+    background-color: #b7efdce2;
     overflow-x: hidden;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -72,9 +72,12 @@ nav {
 .grade-btns-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; 
-    margin-left: auto; 
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin-top: -7rem;
 }
+
 
 .grade-btn {
     background-color: #F5D460;
@@ -98,43 +101,59 @@ nav {
     margin: -2.78125rem 5.625rem; 
 }
 
-.grade-btn:hover {
+.grade-btn:hover,.grade-btn.active {
     background-color: #F0A500;
 }
 
 
 
 .grade-banner {
-    background-color: #6FA7B3;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 2rem; 
+    font-style: normal;
+    font-family: "Inria Sans", sans-serif;
+    font-weight: 400;
+    padding-right: 6rem;
+    padding-top: 4rem;
+} 
+
+.select-banner {
     color: rgb(0, 0, 0);
     text-align: center;
-    font-size: 6rem; /* 80px */
-    padding: 4.125rem; /* 50px */
+    font-size: 5rem; 
+    font-style: normal;
+    /* font-family: "Inria Sans", sans-serif; */
     font-family: "Butterfly Kids", cursive;
     font-weight: 600;
-    font-style: normal;
 }
 
+
+
 .sec3 {
-    background-color: #6FA7B3; 
+    background-color: #b7efdce2; 
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 6.25rem; /* 100px */
-}
+    margin-bottom: 3.25rem; 
+    padding-left: 13.75rem; /* 80px */
+} 
 
 .rectangle-container {
     display: grid;
-    gap: 6.25rem; /* 100px */
-    width: 50%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.875rem; /* 30px */
+    width: 80%;
+    max-width: 60rem; /* 1200px */
+    margin-top: -5rem;
 }
 
 .rectangle {
     overflow: hidden;
     text-align: center;
     width: 100%;
-    height: 25rem; /* 400px */
+    height: 18.75rem; /* 300px */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -144,9 +163,9 @@ nav {
 .rectangle img {
     width: 100%;
     height: auto;
-    max-height: 21.875rem; /* 350px */
+    max-height: 15.625rem; /* 250px */
     object-fit: cover;
-    border-radius: 2.8125rem; /* 45px */
+    border-radius: 0.625rem; /* 10px */
 }
 
 .start-button {
@@ -169,9 +188,170 @@ nav {
 }
 
 
+
+
+
+.sec4 {
+    width: 100%;
+    height:100%;
+    background-color: rgba(255, 255, 255, 0.665);  
+    box-sizing: border-box; 
+    font-family: "Inria Sans", sans-serif;
+    padding-top: 6%;
+    padding-left: 2rem;
+
+}
+
+.sec4 h1 {
+    color: #000;
+    text-align: center;
+    font-family: "Inria Sans", sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+
+
+}
+
+.sec4 img {
+    width: 529px;
+    height: 530px;
+    position: relative;
+    top: -600px;
+
+}
+
+.lesson {
+    padding-top: 5%;
+    position: relative;
+    left: 50% ;
+}
+
+.lesson img {
+    width: 68px;
+    height: 74px;
+    position: absolute;
+    left: 0%;
+    top: 180px;
+
+}
+
+.lesson h1 {
+    color: #000;
+    font-family: "Inria Sans";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+    left: -475px;
+    top: -30px;
+    
+}
+
+.lesson p {
+    color: #000;
+    font-family: "Inria Sans", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    top: 5%;
+    left: 115px;
+}
+
+.games {
+    position: relative;
+    left: 50% ;
+}
+
+.games img {
+    width: 80px;
+    height: 58px;
+    position: absolute;
+    left: 0%;
+    top: 150px;
+
+}
+
+.games h1 {
+    color: #000;
+    font-family: "Inria Sans";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+    left: -550px;
+    top: 20px;
+    
+}
+
+.games p {
+    color: #000;
+    font-family: "Inria Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    top: 40px;
+    left: 115px;
+}
+
+.quiz {
+    position: relative;
+    left: 50% ;
+}
+
+.quiz img {
+    width: 79px;
+    height: 77px;
+    position: absolute;
+    left: 0%;
+    top: 200px;
+
+}
+
+.quiz h1 {
+    color: #000;
+    font-family: "Inria Sans";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+    left: -580px;
+    top: 70px;
+    
+}
+
+.quiz p {
+    color: #000;
+    font-family: "Inria Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    top: 100px;
+    left: 115px;
+}
+
+
+
+
+
+
+
+
 /* Footer */
 footer {
-    background-color: #f4f4f4;
+    margin-top: -20rem;
+    background-color: #ffffff;
     color: #f8cf66;
     padding: 4.6875rem 1.875rem; /* 75px, 30px */
     display: flex;
@@ -222,5 +402,7 @@ footer p {
     font-weight: 500;
     text-align: right;
 }
+
+
 
 
