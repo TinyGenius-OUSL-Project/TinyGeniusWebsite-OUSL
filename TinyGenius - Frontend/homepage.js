@@ -6,11 +6,11 @@ const rectangleContainer = document.getElementById('rectangle-container');
 // Subject data for each grade
 const gradeContent = {
     1: [
-        { subject: "MATHS", img: "Assets/grades/subs/doodle maths (2).jpg", link: "gr1-maths.html" },
-        { subject: "ENGLISH", img: "Assets/grades/subs/doodle eng.jpg" },
-        { subject: "ICT", img: "Assets/grades/subs/doodle ict.jpg" },
-        { subject: "ART", img: "Assets/grades/subs/doodle art.jpg" },
-        { subject: "SCIENCE", img: "Assets/grades/subs/doodle science.jpg" },
+        { subject: "MATHS", img: "Assets/home page assets/subs/doodle maths (2).jpg", link: "gr1-maths.html" },
+        { subject: "ENGLISH", img: "Assets/home page assets/subs/doodle eng.jpg" },
+        { subject: "ICT", img: "Assets/home page assets/subs/doodle ict.jpg" },
+        { subject: "ART", img: "Assets/home page assets/subs/doodle art.jpg" },
+        { subject: "SCIENCE", img: "Assets/home page assets/subs/doodle science.jpg" },
     ],
     2: [
         { subject: "SCIENCE", img: "Assets/landing page assets/subs/StockCake-Alphabet Blocks Spelled_1724774194.jpg" },
