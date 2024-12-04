@@ -3,7 +3,8 @@ html, body {
     padding: 0;
     font-family: "Josefin Sans", sans-serif;
     font-weight: 400;
-    background-color: #b7efdce2;
+    background-color: #bcd8cf;
+
     overflow-x: hidden;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -131,7 +132,7 @@ nav {
 
 
 .sec3 {
-    background-color: #b7efdce2; 
+    background-color: #bcd8cf; 
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -185,6 +186,61 @@ nav {
 
 .start-button:hover {
     background-color: #ffb907;
+}
+
+
+.track-progress {
+    background-image: url('Assets/home page assets/StockCake-Enchanted Story Time_1733289490.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    text-align: center; 
+    padding: 50px 20px; 
+    color: white;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.track-container {
+    background-color: rgba(0, 0, 0, 0.75); /* Black with transparency */
+    padding: 30px 20px;
+    border-radius: 20px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.track-progress h1 {
+    font-family: 'Inria Sans', sans-serif; 
+    font-size: 48px; 
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.track-progress p {
+    font-family: 'Inria Sans', sans-serif; 
+    font-size: 20px; 
+    margin-bottom: 30px;
+    font-weight: 400;
+    color: white;
+}
+
+.track-progress .track-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-family: 'Inria Sans', sans-serif; 
+    font-weight: 700; 
+    background-color: #ff9900; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.track-progress .track-btn:hover {
+    background-color: #E76F51;
 }
 
 
@@ -402,6 +458,8 @@ footer p {
     font-weight: 500;
     text-align: right;
 }
+
+
 
 
 
