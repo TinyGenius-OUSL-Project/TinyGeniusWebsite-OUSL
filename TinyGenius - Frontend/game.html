@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game - TinyGenius</title>
+    <link rel="stylesheet" href="gr1-maths.css">
+    <style>
+        /* Ensure the body and html take up the full height of the screen */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        /* Set up the flexbox container for the main content */
+        main {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        /* Ensure the iframe container takes the rest of the space */
+        .game-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        iframe {
+            padding-top:4.75rem ;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="Assets/landing page assets/Tiny2.png" alt="Tiny Genius logo" id="logo">
+        <div class="profile">
+            <a href="#"><img src="Assets/grades/woman.png" alt="Profile"></a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="game-container">
+            <iframe id="gameIframe" src="" allow="fullscreen; autoplay;"></iframe>
+        </div>
+    </main>
+
+    <script>
+        // Function to adjust iframe height based on viewport and nav bar height
+        function adjustIframeHeight() {
+            const navbarHeight = document.querySelector('nav').offsetHeight;
+            const iframe = document.getElementById('gameIframe');
+            const windowHeight = window.innerHeight;
+
+            // Set iframe height to full screen minus the nav bar height
+            iframe.style.height = `${windowHeight - navbarHeight}px`;
+        }
+
+        // Call the function initially to set the iframe height
+        adjustIframeHeight();
+
+        // Also adjust iframe height when the window is resized
+        window.addEventListener('resize', adjustIframeHeight);
+
+        // Get the game URL from the query parameter and load it into the iframe
+        const urlParams = new URLSearchParams(window.location.search);
+        const gameUrl = urlParams.get('gameUrl');
+        const gameIframe = document.getElementById('gameIframe');
+
+        if (gameUrl) {
+            gameIframe.src = gameUrl;
+        } else {
+            gameIframe.src = 'https://www.example.com/default_game'; // Default game URL if none provided
+        }
+    </script>
+</body>
+</html>
