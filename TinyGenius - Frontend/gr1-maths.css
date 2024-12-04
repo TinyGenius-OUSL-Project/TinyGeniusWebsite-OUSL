@@ -1,9 +1,9 @@
 html, body {
     margin: 0;
     padding: 0;
-    font-family: "Josefin Sans", sans-serif;
+    font-family: "Inria Sans", sans-serif;
     font-weight: 400;
-    background-color: #6FA7B3;
+    background-color: #99bbb0b9;;;
     overflow-x: hidden;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -39,7 +39,7 @@ nav {
 }
 
 .grade-btns {
-    background-image: url("Assets/landing page assets/StockCake-Whimsical Storybook Illustration_1720789194.jpg");
+    background-image: url("Assets/home page assets/StockCake-Enchanted Story Time_1733289490.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -73,16 +73,17 @@ nav {
 }
 
 /* Adjust back button to be centered above MATHS */
-.grade-btns-container h3#back-button {
-    font-size: 1.875rem; /* 30px */
-    margin-bottom: 1rem; /* Space between Grade 01 and MATHS */
+#back-button {
+    font-size: 1.775rem; /* 30px */
+    padding-bottom: -10rem; /* Space between Grade 01 and MATHS */
     cursor: pointer;
     color: white;
     transition: color 0.3s ease;
+    text-decoration: none; 
 }
 
-.grade-btns-container h3#back-button:hover {
-    color: #FCD368;
+#back-button:hover {
+    color: rgba(214, 80, 35, 0.794);;
 }
 
 .grade-btns-container h1 {
@@ -102,7 +103,7 @@ nav {
 
 /* Blurred background effect for the heading */
 .content-header {
-    background-color: rgba(0, 0, 0, 0.5); /* Dark transparent overlay */
+    background-color: rgba(214, 80, 35, 0.794); /* Dark transparent overlay */
     backdrop-filter: blur(10px); /* Blur effect */
     padding: 1rem;
     border-radius: 15px;
@@ -119,12 +120,12 @@ nav {
 
 /* Content Item Styling */
 .content-item {
-    background-color: #a3dedc;
+    background-color: #699c90df;
     margin: 1rem auto;
     width: 80%;
     padding: 1.5rem;
     font-size: 1.4rem;
-    color: #15373a;
+    color: #000000;
     font-weight: bold;
     border-radius: 15px;
     display: flex;
@@ -148,8 +149,94 @@ nav {
 .arrow {
     font-size: 1.5rem;
     margin-left: auto;
+    color: #000000;;
+}
+
+
+/* Content Categories Section */
+.content-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+/* Individual Category Styling */
+.category h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #15373a;
+    margin-bottom: 1rem;
+    text-align: left;
+    padding-left: 2rem;
+}
+
+.category-items {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Cards for Games, Quizzes, and Videos */
+.category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    width: 200px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+.category-card span {
+    font-size: 1rem;
+    font-weight: bold;
     color: #15373a;
 }
+
+.category-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Video Card Specific Styling */
+.video-card iframe {
+    border-radius: 15px;
+    margin-bottom: 1rem;
+}
+
+/* Dropdown Content Styling Update */
+.dropdown-content {
+    display: none; /* Hidden by default */
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    margin-top: -0.5rem;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dropdown-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 
 
 
@@ -205,4 +292,40 @@ footer p {
     font-size: 1.125rem; /* 18px */
     font-weight: 500;
     text-align: right;
+}
+
+
+/* Dropdown Content Styling */
+.dropdown-content {
+    display: none; /* Hidden by default */
+    background-color: #FFFFFF;
+    padding: 1rem;
+    margin-top: -0.5rem; /* Overlaps slightly for better visual alignment */
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    color: #333;
+    width: 80%; /* Matches content width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dropdown-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-content li {
+    margin: 0.5rem 0;
+}
+
+.dropdown-content li a {
+    text-decoration: none;
+    color: #15373a;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.dropdown-content li a:hover {
+    color: #F0A500;
 }
