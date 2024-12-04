@@ -13,14 +13,14 @@ const gradeContent = {
         { subject: "SCIENCE", img: "Assets/home page assets/subs/doodle science.jpg" },
     ],
     2: [
-        { subject: "SCIENCE", img: "Assets/landing page assets/subs/StockCake-Alphabet Blocks Spelled_1724774194.jpg" },
-        { subject: "HISTORY", img: "Assets/landing page assets/subs/StockCake-Alphabet Blocks Spelled_1724774194.jpg" },
-        { subject: "ART", img: "Assets/landing page assets/subs/StockCake-Alphabet Blocks Spelled_1724774194.jpg" },
+        { subject: "SCIENCE", img: "Assets/home page assets/subs/doodle science.jpg" },
+        { subject: "ICT", img: "Assets/home page assets/subs/doodle ict.jpg" },
+        { subject: "ART", img: "Assets/home page assets/subs/doodle art.jpg" },
     ],
     3: [
-        { subject: "PHYSICS", img: "Assets/landing page assets/subs/StockCake-Alphabet Blocks Spelled_1724774194.jpg" },
-        { subject: "CHEMISTRY", img: "Assets/landing page assets/subs/StockCake-Alphabet Blocks Spelled_1724774194.jpg" },
-        { subject: "BIOLOGY", img: "Assets/landing page assets/subs/StockCake-Alphabet Blocks Spelled_1724774194.jpg" },
+        { subject: "ENGLISH", img: "Assets/home page assets/subs/doodle eng.jpg" },
+        { subject: "MATHS", img: "Assets/home page assets/subs/doodle maths (2).jpg", link: "gr1-maths.html" },
+        { subject: "ART", img: "Assets/home page assets/subs/doodle art.jpg" },
     ],
 };
 
