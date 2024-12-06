@@ -40,118 +40,10 @@
                 <h2>Contents</h2>
             </div>
 
-            <!-- Content Item 1 -->
-            <div class="content-item" onclick="toggleDropdown('unit1')">
-                <span class="arrow">▼</span>
-                <span class="content-text">Pre-mathematical skills</span>
-            </div>
-            <div class="dropdown-content" id="unit1">
-                <div class="content-categories">
-                    <!-- Games Section -->
-                    <div class="category">
-                        <h3>Games</h3>
-                        <div class="category-items">
-                            <a href="game.html?gameUrl=https://www.educaplay.com/game/21660299-number_explorers_quiz.html"
-                                class="category-card">
-                                <img src="Assets/grades/content/educaplay froggy.png" alt="Game Icon">
-                                <span>Number Explorers</span>
-                            </a>
-                            <a href="game.html?gameUrl=https://www.educaplay.com/game/21681461-match_the_shapes.html"
-                                class="category-card">
-                                <img src="Assets/grades/content/educaplay matching.png" alt="Game Icon">
-                                <span>Match the Shapes</span>
-                            </a>
-                        </div>
-                    </div>
+        </section>
 
-                    <!-- Quizzes Section -->
-                    <div class="category">
-                        <h3>Quizzes</h3>
-                        <div class="category-items">
-                            <a href="game.html?gameUrl=https://www.educaplay.com/game/21704867-fill_in_the_blanks_discovering_patterns.html"
-                                class="category-card">
-                                <img src="Assets/grades/content/educaplay fill in the blanks.png" alt="Quiz Icon">
-                                <span>Math Quiz</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Videos Section -->
-                    <div class="category">
-                        <h3>Videos</h3>
-                        <div class="category-items">
-                                <iframe width="681" height="383" src="https://www.youtube.com/embed/tVHOBVAFjUw"
-                                    title="Learn Addition up to 10 | Addition 1 to 9 | Math for Kindergarten & 1st Grade | Kids Academy"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    allowfullscreen>
-                                </iframe>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-
-            <!-- Content Item 2 -->
-            <div class="content-item" onclick="toggleDropdown('unit2')">
-                <span class="arrow">▼</span>
-                <span class="content-text">Numbers</span>
-            </div>
-            <div class="dropdown-content" id="unit2">
-                <div class="content-categories">
-                    <!-- Games Section -->
-                    <div class="category">
-                        <h3>Games</h3>
-                        <div class="category-items">
-                            <a href="game.html?gameUrl=https://www.educaplay.com/game/21660299-number_explorers_quiz.html"
-                                class="category-card">
-                                <img src="Assets/grades/content/educaplay froggy.png" alt="Game Icon">
-                                <span>Number Explorers</span>
-                            </a>
-                            <a href="game.html?gameUrl=https://www.educaplay.com/game/21681461-match_the_shapes.html"
-                                class="category-card">
-                                <img src="Assets/grades/content/educaplay matching.png" alt="Game Icon">
-                                <span>Match the Shapes</span>
-                            </a>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-
-            <!-- Content Item 3 -->
-            <div class="content-item" onclick="toggleDropdown('unit3')">
-                <span class="arrow">▼</span>
-                <span class="content-text">Measurements</span>
-            </div>
-            <div class="dropdown-content" id="unit3">
-                <div class="content-categories">
-                    <!-- Content like Games, Quizzes, and Videos for Measurements -->
-                </div>
-            </div>
-
-            <!-- Content Item 4 -->
-            <div class="content-item" onclick="toggleDropdown('unit4')">
-                <span class="arrow">▼</span>
-                <span class="content-text">Money</span>
-            </div>
-            <div class="dropdown-content" id="unit4">
-                <div class="content-categories">
-                    <!-- Content like Games, Quizzes, and Videos for Money -->
-                </div>
-            </div>
-
-            <!-- Content Item 5 -->
-            <div class="content-item" onclick="toggleDropdown('unit5')">
-                <span class="arrow">▼</span>
-                <span class="content-text">Shapes & Figures</span>
-            </div>
-            <div class="dropdown-content" id="unit5">
-                <div class="content-categories">
-                    <!-- Content like Games, Quizzes, and Videos for Shapes & Figures -->
-                </div>
-            </div>
+        <section class="contents" id="content-container">
+            <!-- All content will be dynamically inserted here -->
         </section>
     </main>
 
@@ -169,16 +61,8 @@
         <p>&copy; 2023 Tiny Genius. All rights reserved. Website Designed & Developed by Tiny Genius team</p>
     </footer>
 
-    <script>
-        function toggleDropdown(id) {
-            const dropdown = document.getElementById(id);
-            if (dropdown.style.display === "block") {
-                dropdown.style.display = "none"; // Hide the content
-            } else {
-                dropdown.style.display = "block"; // Show the content
-            }
-        }
-    </script>
+    <script type="module" src="gr1-maths.js"></script>
 </body>
 
 </html>
+
