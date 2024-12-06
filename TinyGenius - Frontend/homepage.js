@@ -1,3 +1,4 @@
+// homepage.js
 import contentData from './content.js';
 
 function toggleDropdown(id) {
@@ -62,3 +63,4 @@ contentData.gradeButtons.forEach(button => {
         }
     });
 });
+
