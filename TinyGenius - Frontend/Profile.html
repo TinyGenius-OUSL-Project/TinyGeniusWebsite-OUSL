@@ -16,6 +16,7 @@
         <div>
             <p id="back"><img src="Assets/profile/right-arrow.png" alt="" id="back-arrow"> Profile</p>
         </div>
+        <button id="logout">LOG OUT</button>
         <div class="profile">
             <a href="#"><img src="Assets/grades/woman.png" alt="Profile"></a>
         </div>
@@ -62,7 +63,121 @@
             
             <button type="submit" class="save-btn">SAVE CHANGES</button>
         </form>
+
+
+
+
+        <section class="parental-control-container">
+            <div class="label-container">
+                <label for="parental-control">Parental Control</label>
+                <span class="separator"></span>
+            </div>
+            <div class="parental-control">
+                <div class="toggle-container">
+                    <label for="enable-parental-control">Enable Parental Control</label>
+                    <div class="toggle-switch" id="enable-parental-control"></div>
+                </div>
+                <br>
+
+                
+                <div id="parental-settings" style="display: none;">
+                    <div class="label-container">
+                        <label for="session-time">Session Time Limit</label>
+                        <span class="separator"></span>
+                    </div>
+
+                
+                    <div class="time-inputs">
+                        <input type="number" id="session-hours" placeholder="Hours" min="0">
+                        <span>hours</span>
+                        <input type="number" id="session-minutes" placeholder="Minutes" min="0" max="59">
+                        <span>minutes</span>
+                    </div>
+                    <br>
+
+                    
+                    <div class="label-container">
+                        <label for="assign-tasks">Assign Tasks</label>
+                        <span class="separator"></span>
+                    </div>
+                    
+                    <div class="assign-tasks-container">
+                        <select id="grade-select" class="filter-tasks">
+                            <option value="">Select Grade</option>
+                            <option value="1">Grade 1</option>
+                            <option value="2">Grade 2</option>
+                            <option value="3">Grade 3</option>
+                        </select>
+                    
+                        <select id="filter-tasks" class="filter-tasks">
+                            <option value="">Select Filter</option>
+                            <option value="all">All Tasks</option>
+                            <option value="selected">Selected Tasks</option>
+                            <option value="unselected">Unselected Tasks</option>
+                        </select>
+                    </div>
+                    
+                    <div id="tasks-list" class="tasks-list" style="display: none;">
+                        <!-- Grade 1 Games -->
+                        <div class="grade-tasks" id="grade1-tasks" style="display: none;">
+                            <label>
+                                <input type="checkbox" class="task-checkbox" data-task="game1">
+                                Game 1
+                            </label>
+                            <label>
+                                <input type="checkbox" class="task-checkbox" data-task="game2">
+                                Game 2
+                            </label>
+                        </div>
+                        
+                        <!-- Grade 2 Games -->
+                        <div class="grade-tasks" id="grade2-tasks" style="display: none;">
+                            <label>
+                                <input type="checkbox" class="task-checkbox" data-task="game3">
+                                Game 3
+                            </label>
+                            <label>
+                                <input type="checkbox" class="task-checkbox" data-task="game4">
+                                Game 4
+                            </label>
+                        </div>
+                    
+                        <!-- Grade 3 Games -->
+                        <div class="grade-tasks" id="grade3-tasks" style="display: none;">
+                            <label>
+                                <input type="checkbox" class="task-checkbox" data-task="game5">
+                                Game 5
+                            </label>
+                            <label>
+                                <input type="checkbox" class="task-checkbox" data-task="game6">
+                                Game 6
+                            </label>
+                        </div>
+                    </div>
+                    
+                    
+                    
+
+                </div>
+
+
+            </div>
+        </section>
         
+        <!-- PIN Popup -->
+        <div id="pin-popup" class="popup-overlay" style="display: none;">
+            <div class="popup-content">
+                <h2 id="popup-title">Set PIN</h2>
+                <p id="popup-message">Please enter a 4-digit PIN:</p>
+                <input type="password" id="pin-input" maxlength="4" placeholder="Enter PIN">
+                <div class="popup-buttons">
+                    <button id="cancel-btn">CANCEL</button>
+                    <button id="submit-btn">SUBMIT</button>
+                </div>
+            </div>
+        </div>
+        
+        <script src="profile.js"></script>
         
     
     
