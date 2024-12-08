@@ -17,8 +17,21 @@
     <nav>
         <img src="Assets/landing page assets/Tiny2.png" alt="Tiny Genius logo" id="logo">
         <div class="profile">
-            <a href="Profile.html"><img src="Assets/grades/woman.png" alt="Profile"></a>
-        </div>
+      
+        <img id="profile-img" src="Assets/grades/placeholder.png" alt="Profile Picture" class="profile-img">
+            <div class="user-info">
+                <span id="username" class="username"><?php echo $username; ?></span>
+                <span class="dropdown-icon">&#x25BC;</span>
+                <ul class="dropdown-menu">
+                    <li><a href="HomePage.html" class="dropdown-item">Home</a></li>
+                    <li><a href="#" class="dropdown-item">Track Progress</a></li>
+                    <li><a href="grades.html" class="dropdown-item">Grade</a></li>
+                    <li><a href="HomePage.html" class="dropdown-item">Q&A</a></li>
+                    <li><a href="Profile.html" class="dropdown-item">Profile Settings</a></li>
+                    <li><a href="logout.php" class="dropdown-item">Log Out</a></li>
+                </ul>
+            </div>
+    </div>
     </nav>
 
     <div class="grade-btns">
