@@ -31,13 +31,83 @@ nav {
     float: left;
 }
 
-.profile img {
-    margin: 0.1875rem 3.75rem 0 0; /* 3px, 60px */
-    border-radius: 100%;
-    width: 3.125rem; /* 50px */
-    height: 3.125rem; /* 50px */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    position: relative;
 }
 
+.username {
+    font-family: "Inria Sans", sans-serif;
+    font-weight: 550;
+    font-size: 1.25rem;
+    color: #15373A;
+}
+
+.dropdown-menu li {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-family: "Inria Sans", sans-serif;
+    font-size: 1rem;
+    color: #15373A;
+}
+
+.dropdown-menu li:hover {
+    cursor: pointer;
+    background-color:#ecffa2;
+
+}
+
+.dropdown-icon{
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    list-style: none;
+    padding: 8px 0;
+    min-width: 150px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: translateY(-10px);
+}
+
+.dropdown-menu.open {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+.profile {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 10rem; /* Move to the left of the navbar */
+    gap: 0.5rem;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 3.125rem;
+    height: 3.125rem;
+    
+}
+/* 
+.profile img {
+    margin: 0.1875rem 3.75rem 0 0; /* 3px, 60px */
+/*     border-radius: 100%;
+    width: 3.125rem; 
+    height: 3.125rem; 
+}
+  */
 .grade-btns {
     background-image: url("Assets/landing page assets/StockCake-Whimsical Storybook Illustration_1720789194.jpg");
     /*
