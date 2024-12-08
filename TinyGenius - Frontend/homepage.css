@@ -31,6 +31,7 @@ nav {
     float: left;
 }
 
+/*dropdown*/
 .user-info {
     display: flex;
     align-items: center;
