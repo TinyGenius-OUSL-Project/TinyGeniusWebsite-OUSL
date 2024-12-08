@@ -6,7 +6,7 @@ const contentData = {
       {
         subject: "MATHS",
         img: "Assets/home page assets/subs/doodle maths (2).jpg",
-        link: "gr1-maths.html",
+        link: "subject.html",
         units: [
           {
             unitTitle: "Pre-mathematical skills",
@@ -111,7 +111,7 @@ const contentData = {
       {
         subject: "ENGLISH",
         img: "Assets/home page assets/subs/doodle eng.jpg",
-        link: "gr1-maths.html",
+        link: "subject.html",
         units: [
         ],
       },
@@ -119,7 +119,7 @@ const contentData = {
       {
         subject: "ICT",
         img: "Assets/home page assets/subs/doodle ict.jpg",
-        link: "gr1-maths.html",
+        link: "subject.html",
         units: [
         ],
       },
@@ -127,7 +127,7 @@ const contentData = {
       {
         subject: "ART",
         img: "Assets/home page assets/subs/doodle art.jpg",
-        link: "gr1-maths.html",
+        link: "subject.html",
         units: [
         ],
       },
@@ -140,7 +140,7 @@ const contentData = {
       {
         subject: "ENGLISH",
         img: "Assets/home page assets/subs/doodle eng.jpg",
-        link: "gr1-maths.html",
+        link: "subject.html",
         units: [
         ],
       },
@@ -148,7 +148,7 @@ const contentData = {
       {
         subject: "MATHS",
         img: "Assets/home page assets/subs/doodle maths (2).jpg",
-        link: "gr1-maths.html",
+        link: "subject.html",
         units: [
         ],
       },
@@ -156,7 +156,7 @@ const contentData = {
       {
         subject: "ART",
         img: "Assets/home page assets/subs/doodle art.jpg",
-        link: "gr1-maths.html",
+        link: "subject.html",
         units: [
         ],
       },
@@ -170,14 +170,14 @@ const contentData = {
       {
         subject: "ART",
         img: "Assets/home page assets/subs/doodle art.jpg",
-        link: "gr1-maths.html",
+        link: "subject.html",
         units: [
         ],
       },
       {
         subject: "ENGLISH",
         img: "Assets/home page assets/subs/doodle eng.jpg",
-        link: "gr1-maths.html",
+        link: "subject.html",
         units: [
         ],
       },
@@ -185,7 +185,7 @@ const contentData = {
       {
         subject: "MATHS",
         img: "Assets/home page assets/subs/doodle maths (2).jpg",
-        link: "gr1-maths.html",
+        link: "subject.html",
         units: [
         ],
       },
