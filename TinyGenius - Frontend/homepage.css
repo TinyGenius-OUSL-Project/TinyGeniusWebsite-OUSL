@@ -531,6 +531,50 @@ footer p {
 }
 
 
+.image-container {
+    position: relative;
+    display: inline-block;
+
+    width: 100%;
+    height: auto;
+    max-height: 15.625rem; /* 250px */
+    border-radius: 1rem; /* 10px */
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2); 
+    display: none; 
+    z-index: 1; 
+    border-radius: 0.625rem;
+}
+
+
+.start-button {
+    position: relative;  
+    z-index: 2; 
+}
+
+.start-button.locked {
+    background-color: #c6c5c5; 
+    pointer-events: none; 
+    color: #484848;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
