@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             $response["status"] = "success";
             $response["message"] = "Login successful!";
-            $response["redirect"] = "HomePage.html"; // Redirect to homepage
+            $response["redirect"] = "homepage.html"; // Redirect to homepage
         } else {
             // Invalid credentials
             $response["message"] = "Invalid username or password.";
