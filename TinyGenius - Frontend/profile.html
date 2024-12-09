@@ -96,11 +96,13 @@
                     <br>
 
                     
+                    
+                <div id="parental-settings" style="display: none;">
                     <div class="label-container">
                         <label for="assign-tasks">Assign Tasks</label>
                         <span class="separator"></span>
                     </div>
-                    
+
                     <div class="assign-tasks-container">
                         <select id="grade-select" class="filter-tasks">
                             <option value="">Select Grade</option>
@@ -108,14 +110,13 @@
                             <option value="2">Grade 2</option>
                             <option value="3">Grade 3</option>
                         </select>
-                    
-                        <select id="filter-tasks" class="filter-tasks">
-                            <option value="">Select Filter</option>
-                            <option value="all">All Tasks</option>
-                            <option value="selected">Selected Tasks</option>
-                            <option value="unselected">Unselected Tasks</option>
-                        </select>
                     </div>
+
+                    <ul id="tasks-list" class="tasks-list" style="display: none; list-style: none; padding: 0;"></ul>
+
+
+                </div>
+            </div>
                     
                     <div id="tasks-list" class="tasks-list" style="display: none;">
                         <!-- Grade 1 Games -->
