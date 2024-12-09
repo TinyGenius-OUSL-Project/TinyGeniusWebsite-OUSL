@@ -1,117 +1,159 @@
-let pinSet = false; // Track if a PIN has been set
-let savedPin = '';  // Store the saved PIN
+import contentData from './content.js';
 
-// Toggle Button Event Listener
+
+let pinSet = false; 
+let savedPin = '';  
+
+
+const gradeSelect = document.getElementById('grade-select');
+const tasksList = document.getElementById('tasks-list');
+const parentalSettings = document.getElementById('parental-settings');
+const pinPopup = document.getElementById('pin-popup');
+const pinInput = document.getElementById('pin-input');
+
+
 document.getElementById('enable-parental-control').addEventListener('click', function () {
     const toggle = this;
     toggle.classList.toggle('active');
 
     if (toggle.classList.contains('active')) {
-        // Show PIN popup to enable parental control
         showPinPopup(pinSet ? 'Enter PIN' : 'Set PIN');
     } else {
-        // Disable settings
-        document.getElementById('parental-settings').style.display = 'none';
+        parentalSettings.style.display = 'none';
     }
 });
 
-// Show PIN Popup
+
 function showPinPopup(mode) {
     document.getElementById('popup-title').textContent = mode;
     document.getElementById('popup-message').textContent =
         mode === 'Set PIN' ? 'Please set a 4-digit PIN:' : 'Enter your 4-digit PIN:';
-    document.getElementById('pin-popup').style.display = 'flex';
-    document.getElementById('pin-input').value = ''; // Clear input
+    pinPopup.style.display = 'flex';
+    pinInput.value = ''; 
 }
 
-// Handle Popup Buttons
+
 document.getElementById('cancel-btn').addEventListener('click', function () {
-    document.getElementById('pin-popup').style.display = 'none';
-    document.getElementById('enable-parental-control').classList.remove('active'); // Revert toggle
+    pinPopup.style.display = 'none';
+    document.getElementById('enable-parental-control').classList.remove('active'); 
 });
 
 document.getElementById('submit-btn').addEventListener('click', function () {
-    const pinInput = document.getElementById('pin-input').value;
+    const enteredPin = pinInput.value;
 
-    if (pinInput.length !== 4 || isNaN(pinInput)) {
+    if (enteredPin.length !== 4 || isNaN(enteredPin)) {
         alert('Please enter a valid 4-digit PIN.');
         return;
     }
 
     if (!pinSet) {
-        // Set PIN for the first time
-        savedPin = pinInput;
+
+        savedPin = enteredPin;
         pinSet = true;
         alert('PIN set successfully!');
-    } else {
-        // Verify PIN
-        if (pinInput !== savedPin) {
-            alert('Incorrect PIN.');
-            return;
-        }
+    } else if (enteredPin !== savedPin) {
+        alert('Incorrect PIN.');
+        return;
     }
 
-    // Enable parental settings
-    document.getElementById('parental-settings').style.display = 'block';
-    document.getElementById('pin-popup').style.display = 'none';
+
+    parentalSettings.style.display = 'block';
+    pinPopup.style.display = 'none';
 });
 
+// populate html dynamically
+function populateSubjects(grade) {
+    tasksList.innerHTML = '';
 
 
-// Get elements
-const gradeSelect = document.getElementById('grade-select');
-const filterSelect = document.getElementById('filter-tasks');
-const grade1Tasks = document.getElementById('grade1-tasks');
-const grade2Tasks = document.getElementById('grade2-tasks');
-const grade3Tasks = document.getElementById('grade3-tasks');
-const tasksList = document.getElementById('tasks-list');
+    const gradeContent = contentData.gradeContent[grade];
 
-// Event listener for grade selection
+    if (gradeContent) {
+
+        tasksList.style.display = 'block';
+
+
+        const savedSelections = JSON.parse(localStorage.getItem('selectedSubjects')) || {};
+        const selectedSubjects = savedSelections[grade] || [];
+
+
+        gradeContent.forEach(subject => {
+            const subjectItem = document.createElement('li');
+            subjectItem.classList.add('subject-item');
+
+            const subjectCheckbox = document.createElement('input');
+            subjectCheckbox.type = 'checkbox';
+            subjectCheckbox.id = subject.subject;
+            subjectCheckbox.dataset.subject = subject.subject;
+
+
+            if (selectedSubjects.includes(subject.subject)) {
+                subjectCheckbox.checked = true;
+            }
+
+            const subjectLabel = document.createElement('label');
+            subjectLabel.setAttribute('for', subject.subject);
+            subjectLabel.textContent = subject.subject;
+
+
+            subjectItem.appendChild(subjectCheckbox);
+            subjectItem.appendChild(subjectLabel);
+
+
+            tasksList.appendChild(subjectItem);
+
+
+            subjectCheckbox.addEventListener('change', saveSelections);
+        });
+    } else {
+
+        tasksList.style.display = 'none';
+    }
+}
+
+
+// save selections to local storage
+function saveSelections() {
+    const selectedGrade = gradeSelect.value;
+
+    if (!selectedGrade) {
+        alert('Please select a grade before saving.');
+        return;
+    }
+
+
+    const existingData = JSON.parse(localStorage.getItem('selectedSubjects')) || {};
+    const selectedSubjects = Array.from(document.querySelectorAll('#tasks-list input[type="checkbox"]:checked'))
+        .map(checkbox => checkbox.dataset.subject);
+
+
+    existingData[selectedGrade] = selectedSubjects;
+
+
+    localStorage.setItem('selectedSubjects', JSON.stringify(existingData));
+
+    console.log('Selections saved:', selectedSubjects);
+}
+
+
 gradeSelect.addEventListener('change', function () {
     const selectedGrade = this.value;
-
     if (selectedGrade) {
-        filterSelect.value = 'all'; 
-    }
-
-
-    grade1Tasks.style.display = 'none';
-    grade2Tasks.style.display = 'none';
-    grade3Tasks.style.display = 'none';
-    tasksList.style.display = 'none'; 
-
-    if (selectedGrade === '1') {
-        grade1Tasks.style.display = 'block';
-    } else if (selectedGrade === '2') {
-        grade2Tasks.style.display = 'block';
-    } else if (selectedGrade === '3') {
-        grade3Tasks.style.display = 'block';
-    }
-
-    if (selectedGrade && filterSelect.value) {
-        tasksList.style.display = 'block';
+        populateSubjects(selectedGrade);
+    } else {
+        tasksList.style.display = 'none'; 
     }
 });
 
-// Event listener for filter selection
-filterSelect.addEventListener('change', function () {
-    const filterValue = this.value;
-    const tasks = document.querySelectorAll('.task-checkbox');
 
-    tasks.forEach(task => {
-        const isChecked = task.checked;
+document.addEventListener('DOMContentLoaded', function () {
+    gradeSelect.value = ''; 
+    tasksList.style.display = 'none';
 
-        if (filterValue === 'all') {
-            task.closest('label').style.display = 'flex';
-        }
-        else if (filterValue === 'selected' && !isChecked) {
-            task.closest('label').style.display = 'none';
-        }
-        else if (filterValue === 'unselected' && isChecked) {
-            task.closest('label').style.display = 'none';
-        }
-        else {
-            task.closest('label').style.display = 'flex';
-        }
-    });
+
+    const savedGrade = localStorage.getItem('selectedGrade');
+    if (savedGrade) {
+        gradeSelect.value = savedGrade;
+        populateSubjects(savedGrade);
+    }
 });
