@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TinyGenius - Grade 01 Maths</title>
+    <title>TinyGenius - Grade 01 English</title>
     <link rel="stylesheet" href="gr1-english.css">
+    <link rel="stylesheet" href="gr1-english_quiz.css">
+    
 </head>
 <body>
     <nav>
@@ -18,8 +20,8 @@
         <div class="grade-btns">
             <div class="scroll1">
                 <div class="grade-btns-container">
-                    <h3 id="back-button">&lt; Grade 01</h3>
-                    <h1>MATHS</h1>
+                    <h3 id="back-button"> Grade 01</h3>
+                    <h1>ENGLISH</h1>
                 </div>
             </div>
         </div>
@@ -28,32 +30,58 @@
             <div class="content-header">
                 <h2>Contents</h2>
             </div>
+            <a href="track_progress.html" class="track-progress-link">Go to Track Progress</a>
+            <p>Click the link below to view your track progress:</p>
+
             <div class="content-item" onclick="toggleOptions('alphabet-phonics')">
                 <span class="arrow">▼</span>
                 <span class="content-text">Alphabet and Phonics</span>
             </div>
             <div id="alphabet-phonics" class="options" style="display: none;">
-                <div class="option-item" onclick="showGame()">Game</div>
-                <div class="option-item">Quiz</div>
+                <div class="option-item" onclick="window.location.href='https://www.educaplay.com/learning-resources/21792062-phonic_picture_match.html'">Game</div>
+                <div class="option-item" onclick="openQuiz1()">Quiz</div>
             </div>
-            <div class="content-item">
-                <span class="arrow">▼</span>
-                <span class="content-text">Basic Vocabulary</span>
+            <div class="content-item" onclick="toggleOptions('basic-vocabulary')">
+            <span class="arrow">▼</span>
+            <span class="content-text">Basic Vocabulary</span>
             </div>
-            <!-- Other content items here -->
-        </section>
+            <div id="basic-vocabulary" class="options" style="display: none;">
+            <div class="option-item" onclick="openVideo('basic-vocabulary')">Video</div>
+            <div class="option-item" onclick="window.location.href='https://www.educaplay.com/game/21792292-basic_vocabulary.html'">Game</div>
+            <div class="option-item" onclick="openQuiz1()">Quiz</div>
+            </div>
 
-        <section id="game-section" class="game-section" style="display: none;">
-            <h2>Alphabet Game</h2>
-            <div id="game-content">
-                <p>Press "Start" to play!</p>
-                <button onclick="startGame()">Start</button>
-                <div id="game-instructions"></div>
-                <input type="text" id="user-input" placeholder="Type the letter here" style="display: none;">
+            <div class="content-item" onclick="toggleOptions('simple-sentences')">
+            <span class="arrow">▼</span>
+            <span class="content-text">Simple Sentences</span>
             </div>
+            <div id="simple-sentences" class="options" style="display: none;">
+            <div class="option-item" onclick="openVideo('simple-sentences')">Video</div>
+            <div class="option-item" onclick="window.location.href='https://www.educaplay.com/game/21792408-simple_sentences_quiz_game.html'">Game</div>
+            <div class="option-item" onclick="openQuiz1()">Quiz</div>
+            </div>
+
+           <div class="content-item" onclick="toggleOptions('listening-speaking')">
+           <span class="arrow">▼</span>
+           <span class="content-text">Listening and Speaking</span>
+           </div>
+           <div id="listening-speaking" class="options" style="display: none;">
+           <div class="option-item" onclick="https://www.educaplay.com/game/21792527-listening_and_speaking.html'">Game</div>
+           <div class="option-item" onclick="openQuiz1()">Quiz</div>
+           </div>
+
+           <div class="content-item" onclick="toggleOptions('reading-writing')">
+           <span class="arrow">▼</span>
+           <span class="content-text">Reading and Writing Basics</span>
+           </div>
+           <div id="reading-writing" class="options" style="display: none;">
+           <div class="option-item" onclick="openVideo('reading-writing')">Video</div>
+           <div class="option-item" onclick="openQuiz1()">Quiz</div>
+           </div>
+
         </section>
-        
     </main>
+
     <footer>
         <div class="footer-btns">
             <button>ABOUT US</button>
@@ -68,7 +96,25 @@
         <p>&copy; 2023 Tiny Genius. All rights reserved. Website Designed & Developed by Tiny Genius team</p>
     </footer>
 
-    <script src="engscript.js"></script>
+    <!-- Modal and overlay -->
+    <div id="overlay"></div>
+    <div id="QuizModal">
+        <div id="Quiz-message">
+            <h1>Welcome to Alphabet Quiz Fun!</h1>
+            <button id="start-Quiz-btn">Start</button>
+        </div>
+        <div id="Quiz-area" class="hidden">
+            <div class="question" id="question-text"></div>
+            <div class="options" id="options-container"></div>
+            <button id="next-btn" class="hidden" disabled>Next</button>
+            <div id="score"></div>
+        </div>
+        <div id="end-message" class="hidden">
+            <h3 id="final-score-message"></h3>
+            <button onclick="closeQuiz()">Close</button>
+        </div>
+
+
+    <script src="gr1-english_quiz.js"></script>
 </body>
 </html>
-
