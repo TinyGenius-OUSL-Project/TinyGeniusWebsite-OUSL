@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Progress</title>
-    <link rel="stylesheet" href="trackProgress.css">
+    <link rel="stylesheet" href="track_progress.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -30,22 +27,31 @@
     
     <div class="container">
         <div class="content">
-            <div class="select-section">
-                <label for="grade">Select:</label>
-                <button id="grade-btn">Grade 01</button>
-                <button id="unit-btn">Unit 01</button>
-            </div>
-
-            <div class="progress-bar">
-                <div class="circle active"></div>
-                <div class="line active"></div>
-                <div class="circle active"></div>
-                <div class="line active"></div>
-                <div class="circle active"></div>
-                <div class="line"></div>
-                <div class="circle"></div>
+            <div id="recent-activities">
+                <div class="activity">
+                    <strong>English</strong> - <em>Alphabet and Phonics</em><br>
+                    <span id="Quiz-score">Loading score...</span> <!-- Score will be displayed here -->
+                </div>
             </div>
         </div>
     </div>
+
+    <script>
+        // Retrieve and display the score from localStorage
+        function showScore() {
+            const score = localStorage.getItem('alphabetQuizScore'); // Retrieve score from localStorage
+            const scoreElement = document.getElementById('Quiz-score');
+            if (score) {
+                scoreElement.textContent = `Score: ${score}/5`; // Display the score
+            } else {
+                scoreElement.textContent = 'Score: Not yet played'; // If no score is stored, show a message
+            }
+            console.log('Current score:', score);
+        }
+
+        // Show the score when the page loads
+        window.onload = showScore; 
+    </script>
 </body>
 </html>
+
