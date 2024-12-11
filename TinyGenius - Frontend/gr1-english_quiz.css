@@ -1,1 +1,109 @@
+/* Alphabet and phonics Quiz Modal Styles */
+#QuizModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 20px;
+    text-align: center;
+}
+
+#QuizModal h2 {
+    margin-top: 0;
+}
+
+#QuizModal button {
+    padding: 10px 20px;
+    background-color: #fcd368;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#QuizModal button:hover {
+    background-color: #f0a500;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.question {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.options button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for color change */
+}
+
+.options button:hover {
+    background-color: #e0e0e0;
+}
+
+
+#score {
+    margin-top: 20px;
+    font-size: 18px;
+    color: green;
+}
+
+#next-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: not-allowed;
+    font-size: 16px;
+}
+
+#next-btn.enabled {
+    cursor: pointer;
+    background-color: #34a853;
+}
+
+.wrong-answer {
+    background-color: #F44336; /* Red for wrong answer */
+    color: white; /* White text for visibility */
+}
+
+.correct-answer {
+    background-color: #4CAF50; /* Green for correct answer */
+    color: white; /* White text for visibility */
+}
+
+.hidden {
+    display: none;
+}
+
+
+
 
