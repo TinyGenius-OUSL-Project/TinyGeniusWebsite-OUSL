@@ -83,22 +83,23 @@
         </div>
 
         <h2 class="About-title">Message Us</h2>
-  
-    <form class="contact-form">
-      <label for="name" class="form-label">Your Name</label>
-      <input type="text" id="name" class="form-input" placeholder="Full Name" required />
-  
-      <label for="email" class="form-label">Your Email</label>
-      <input type="email" id="email" class="form-input" placeholder="Email Address" required />
-  
-      <label for="subject" class="form-label">Subject</label>
-      <input type="text" id="subject" class="form-input" placeholder="Subject" required />
-  
-      <label for="message" class="form-label">Your Message</label>
-      <textarea id="message" class="form-textarea" placeholder="Message" required></textarea>
-  
-      <button type="submit" class="submit-btn">Send Message</button>
-    </form>
+
+<form class="contact-form" action="http://localhost/process_message.php" method="POST">
+    <label for="name" class="form-label">Your Name</label>
+    <input type="text" id="name" name="name" class="form-input" placeholder="Full Name" required />
+
+    <label for="email" class="form-label">Your Email</label>
+    <input type="email" id="email" name="email" class="form-input" placeholder="Email Address" required />
+
+    <label for="subject" class="form-label">Subject</label>
+    <input type="text" id="subject" name="subject" class="form-input" placeholder="Subject" required />
+
+    <label for="message" class="form-label">Your Message</label>
+    <textarea id="message" name="message" class="form-textarea" placeholder="Message" required></textarea>
+
+    <button type="submit" class="submit-btn">Send Message</button>
+</form>
+
 
     <h2 class="team-title">Developers Behind Tiny Genius</h2>
   
