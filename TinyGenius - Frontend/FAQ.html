@@ -71,7 +71,7 @@
           
             let currentIndex = 0;
           
-            
+            // DOM Elements
             const questionHeader = document.getElementById("questionHeader");
             const answerText = document.getElementById("answerText");
             const leftArrow = document.getElementById("leftArrow");
@@ -83,13 +83,13 @@
               answerText.textContent = `Answer: ${faqs[index].answer}`;
             }
           
-            // Left Arrow Click 
+            // Left Arrow Click Event
             leftArrow.addEventListener("click", () => {
               currentIndex = (currentIndex - 1 + faqs.length) % faqs.length;
               updateFAQ(currentIndex);
             });
           
-            // Right Arrow Click 
+            // Right Arrow Click Event
             rightArrow.addEventListener("click", () => {
               currentIndex = (currentIndex + 1) % faqs.length;
               updateFAQ(currentIndex);
@@ -97,17 +97,18 @@
           
             // Initialize with the first FAQ
             updateFAQ(currentIndex);
-          </script>
+          </script>\
+
+
 
           <section class="submit-section">
-            <form class="submit-form">
+            <form class="submit-form" action="http://localhost/submit_question.php" method="POST">
               <h2 class="submit-title">Submit your question !</h2>
               
-              <input type="text" id="questionInput" class="question-input" placeholder="Write your question..." aria-label="Write your question" />
+              <input type="text" id="questionInput" name="question" class="question-input" placeholder="Write your question..." aria-label="Write your question" required />
               <button type="submit" class="submit-button">Submit</button>
             </form>
           </section>
-          
 
         
 
