@@ -208,10 +208,11 @@ footer p {
 }
 
 
+
 .option-item {
     background-color: #F0A500;
-    padding: 8px;
-    border-radius: 12px; /* Curves the edges */
+    padding: 0.9371rem 1.870rem; /* 15px, 30px */
+    border-radius: 6.25rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
     width: 200px; /* Set a fixed width */
@@ -220,6 +221,5 @@ footer p {
 }
 
 .option-item:hover {
-    background-color: #f1c66b;
+    background-color: #F5D460;
 }
-
