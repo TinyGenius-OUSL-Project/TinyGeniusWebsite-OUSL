@@ -26,32 +26,85 @@
     </header>
     
     <div class="container">
+        <!-- Subject Filter Dropdown -->
+        <div class="filter-container">
+            <label for="subjectFilter">Quiz Marks Filter by Subjects </label>
+            <select id="subjectFilter">
+                <option value="all">All Subjects</option>
+                <option value="english">English</option>
+                <option value="maths">Maths</option>
+                <option value="ict">ICT</option>
+            </select>
+        </div>
+
         <div class="content">
             <div id="recent-activities">
-                <div class="activity">
-                    <strong>English</strong> - <em>Alphabet and Phonics</em><br>
-                    <span id="Quiz-score">Loading score...</span> <!-- Score will be displayed here -->
-                </div>
+                <!-- Activities will be dynamically inserted here -->
             </div>
         </div>
     </div>
 
     <script>
-        // Retrieve and display the score from localStorage
-        function showScore() {
-            const score = localStorage.getItem('alphabetQuizScore'); // Retrieve score from localStorage
-            const scoreElement = document.getElementById('Quiz-score');
-            if (score) {
-                scoreElement.textContent = `Score: ${score}/5`; // Display the score
-            } else {
-                scoreElement.textContent = 'Score: Not yet played'; // If no score is stored, show a message
+        // Function to retrieve and display quiz scores dynamically based on the selected subject
+        function showScore(subjectFilter = 'all') {
+            const activitiesContainer = document.getElementById('recent-activities');
+            activitiesContainer.innerHTML = ''; // Clear any existing content
+
+            // Define an array of quiz topics for each subject
+            const subjects = {
+                english: [
+                    { name: 'Alphabet and Phonics', id: 'Alphabet and PhonicsScore' },
+                    { name: 'Basic Vocabulary', id: 'Basic VocabularyScore' },
+                    { name: 'Simple Sentences', id: 'Simple SentencesScore' },
+                    { name: 'Listening and Speaking', id: 'Listening and SpeakingScore' },
+                    { name: 'Reading and Writing Basics', id: 'Reading and Writing BasicsScore' }
+                ],
+                maths: [
+                    { name: 'Addition and Subtraction', id: 'Addition and SubtractionScore' },
+                    { name: 'Multiplication and Division', id: 'Multiplication and DivisionScore' },
+                    { name: 'Fractions', id: 'FractionsScore' }
+                ],
+                ict: [
+                    { name: 'Basic Computer Skills', id: 'Basic Computer SkillsScore' },
+                    { name: 'Programming Fundamentals', id: 'Programming FundamentalsScore' },
+                    { name: 'Networking Basics', id: 'Networking BasicsScore' }
+                ]
+            };
+
+            // If 'all' is selected, show quizzes from all subjects
+            const selectedSubjects = subjectFilter === 'all' ? Object.values(subjects).flat() : subjects[subjectFilter];
+
+            // Iterate over the selected topics and check if the score is available
+            selectedSubjects.forEach(topic => {
+                const score = localStorage.getItem(topic.id);
+                if (score) {
+                    // Create a new activity div to show the topic and score
+                    const activityDiv = document.createElement('div');
+                    activityDiv.classList.add('activity');
+                    activityDiv.innerHTML = `
+                        <strong>${subjectFilter.charAt(0).toUpperCase() + subjectFilter.slice(1)}</strong> - <em>${topic.name}</em><br>
+                        <span>Score: ${score}/5</span>
+                    `;
+                    activitiesContainer.appendChild(activityDiv); // Add the activity to the container
+                }
+            });
+
+            // If no quiz is completed, show a message
+            if (activitiesContainer.children.length === 0) {
+                activitiesContainer.innerHTML = '<p>No quizzes completed yet.</p>';
             }
-            console.log('Current score:', score);
         }
 
         // Show the score when the page loads
-        window.onload = showScore; 
+        window.onload = function() {
+            showScore(); // Default to showing all subjects
+        }
+
+        // Add an event listener to filter by selected subject
+        document.getElementById('subjectFilter').addEventListener('change', function() {
+            const selectedSubject = this.value;
+            showScore(selectedSubject); // Show scores for the selected subject
+        });
     </script>
 </body>
 </html>
-
