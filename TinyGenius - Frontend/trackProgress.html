@@ -78,16 +78,16 @@
             selectedSubjects.forEach(topic => {
                 const score = localStorage.getItem(topic.id);
                 if (score) {
-                    // Create a new activity div to show the topic and score
                     const activityDiv = document.createElement('div');
                     activityDiv.classList.add('activity');
                     activityDiv.innerHTML = `
-                        <strong>${subjectFilter.charAt(0).toUpperCase() + subjectFilter.slice(1)}</strong> - <em>${topic.name}</em><br>
-                        <span>Score: ${score}/5</span>
+                    <em>${topic.name}</em><br>
+                    <span>Score: ${score}/5</span>
                     `;
                     activitiesContainer.appendChild(activityDiv); // Add the activity to the container
-                }
+                    }
             });
+
 
             // If no quiz is completed, show a message
             if (activitiesContainer.children.length === 0) {
