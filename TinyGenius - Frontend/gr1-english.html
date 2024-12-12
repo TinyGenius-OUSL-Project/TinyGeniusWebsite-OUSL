@@ -6,7 +6,6 @@
     <title>TinyGenius - Grade 01 English</title>
     <link rel="stylesheet" href="gr1-english.css">
     <link rel="stylesheet" href="gr1-english_quiz.css">
-    
 </head>
 <body>
     <nav>
@@ -39,46 +38,46 @@
             </div>
             <div id="alphabet-phonics" class="options" style="display: none;">
                 <div class="option-item" onclick="window.location.href='https://www.educaplay.com/learning-resources/21792062-phonic_picture_match.html'">Game</div>
-                <div class="option-item" onclick="openQuiz1()">Quiz</div>
+                <div class="option-item" id="alphabet-phonics-btn" onclick="openQuiz('Alphabet and Phonics')">Quiz</div>
             </div>
+
             <div class="content-item" onclick="toggleOptions('basic-vocabulary')">
-            <span class="arrow">▼</span>
-            <span class="content-text">Basic Vocabulary</span>
+                <span class="arrow">▼</span>
+                <span class="content-text">Basic Vocabulary</span>
             </div>
             <div id="basic-vocabulary" class="options" style="display: none;">
-            <div class="option-item" onclick="openVideo('basic-vocabulary')">Video</div>
-            <div class="option-item" onclick="window.location.href='https://www.educaplay.com/game/21792292-basic_vocabulary.html'">Game</div>
-            <div class="option-item" onclick="openQuiz1()">Quiz</div>
+                <div class="option-item" onclick="openVideo('basic-vocabulary')">Video</div>
+                <div class="option-item" onclick="window.location.href='https://www.educaplay.com/game/21792292-basic_vocabulary.html'">Game</div>
+                <div class="option-item" id="basic-vocabulary-btn" onclick="openQuiz('Basic Vocabulary')">Quiz</div>
             </div>
 
             <div class="content-item" onclick="toggleOptions('simple-sentences')">
-            <span class="arrow">▼</span>
-            <span class="content-text">Simple Sentences</span>
+                <span class="arrow">▼</span>
+                <span class="content-text">Simple Sentences</span>
             </div>
             <div id="simple-sentences" class="options" style="display: none;">
-            <div class="option-item" onclick="openVideo('simple-sentences')">Video</div>
-            <div class="option-item" onclick="window.location.href='https://www.educaplay.com/game/21792408-simple_sentences_quiz_game.html'">Game</div>
-            <div class="option-item" onclick="openQuiz1()">Quiz</div>
+                <div class="option-item" onclick="openVideo('simple-sentences')">Video</div>
+                <div class="option-item" onclick="window.location.href='https://www.educaplay.com/game/21792408-simple_sentences_quiz_game.html'">Game</div>
+                <div class="option-item" id="simple-sentences-btn" onclick="openQuiz('Simple Sentences')">Quiz</div>
             </div>
 
-           <div class="content-item" onclick="toggleOptions('listening-speaking')">
-           <span class="arrow">▼</span>
-           <span class="content-text">Listening and Speaking</span>
-           </div>
-           <div id="listening-speaking" class="options" style="display: none;">
-           <div class="option-item" onclick="https://www.educaplay.com/game/21792527-listening_and_speaking.html'">Game</div>
-           <div class="option-item" onclick="openQuiz1()">Quiz</div>
-           </div>
+            <div class="content-item" onclick="toggleOptions('listening-speaking')">
+                <span class="arrow">▼</span>
+                <span class="content-text">Listening and Speaking</span>
+            </div>
+            <div id="listening-speaking" class="options" style="display: none;">
+                <div class="option-item" onclick="window.location.href='https://www.educaplay.com/game/21792527-listening_and_speaking.html'">Game</div>
+                <div class="option-item" id="listening-speaking-btn" onclick="openQuiz('Listening and Speaking')">Quiz</div>
+            </div>
 
-           <div class="content-item" onclick="toggleOptions('reading-writing')">
-           <span class="arrow">▼</span>
-           <span class="content-text">Reading and Writing Basics</span>
-           </div>
-           <div id="reading-writing" class="options" style="display: none;">
-           <div class="option-item" onclick="openVideo('reading-writing')">Video</div>
-           <div class="option-item" onclick="openQuiz1()">Quiz</div>
-           </div>
-
+            <div class="content-item" onclick="toggleOptions('reading-writing')">
+                <span class="arrow">▼</span>
+                <span class="content-text">Reading and Writing Basics</span>
+            </div>
+            <div id="reading-writing" class="options" style="display: none;">
+                <div class="option-item" onclick="openVideo('reading-writing')">Video</div>
+                <div class="option-item" id="reading-writing-btn" onclick="openQuiz('Reading and Writing Basics')">Quiz</div>
+            </div>
         </section>
     </main>
 
@@ -96,23 +95,24 @@
         <p>&copy; 2023 Tiny Genius. All rights reserved. Website Designed & Developed by Tiny Genius team</p>
     </footer>
 
-    <!-- Modal and overlay -->
-    <div id="overlay"></div>
-    <div id="QuizModal">
-        <div id="Quiz-message">
-            <h1>Welcome to Alphabet Quiz Fun!</h1>
-            <button id="start-Quiz-btn">Start</button>
-        </div>
-        <div id="Quiz-area" class="hidden">
-            <div class="question" id="question-text"></div>
-            <div class="options" id="options-container"></div>
-            <button id="next-btn" class="hidden" disabled>Next</button>
-            <div id="score"></div>
-        </div>
-        <div id="end-message" class="hidden">
-            <h3 id="final-score-message"></h3>
-            <button onclick="closeQuiz()">Close</button>
-        </div>
+<!-- Modal and overlay -->
+<div id="overlay" style="display: none;"></div>
+<div id="QuizModal" style="display: none;">
+    <div id="Quiz-message">
+        <h1>Welcome to <span id="quiz-title"></span> Quiz!</h1>
+        <button id="start-Quiz-btn">Start Quiz</button>
+    </div>
+    <div id="Quiz-area" class="hidden">
+        <div class="question" id="question-text"></div>
+        <div class="options" id="options-container"></div>
+        <button id="next-btn" class="hidden" disabled>Next</button>
+        <div id="score"></div>
+    </div>
+    <div id="end-message" class="hidden">
+        <h3 id="final-score-message"></h3>
+        <button onclick="closeQuiz()">Close</button>
+    </div>
+</div>
 
 
     <script src="gr1-english_quiz.js"></script>
