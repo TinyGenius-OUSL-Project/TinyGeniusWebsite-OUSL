@@ -208,7 +208,6 @@ footer p {
 }
 
 
-
 .option-item {
     background-color: #F0A500;
     padding: 0.9371rem 1.870rem; /* 15px, 30px */
@@ -223,3 +222,4 @@ footer p {
 .option-item:hover {
     background-color: #F5D460;
 }
+
