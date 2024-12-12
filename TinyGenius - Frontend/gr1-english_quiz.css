@@ -31,6 +31,23 @@
     background-color: #f0a500;
 }
 
+#start-Quiz-btn {
+    display: block;           /* Make the button a block-level element */
+    margin: 0 auto;           /* Auto margin on left and right to center */
+    padding: 10px 20px;       /* Add padding for better button size */
+    background-color: #fcd368;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;       /* Ensure the text inside the button is centered */
+}
+
+#start-Quiz-btn:hover {
+    background-color: #f0a500;
+}
+
+
 #overlay {
     display: none;
     position: fixed;
@@ -105,5 +122,9 @@
 }
 
 
-
-
+#QuizModal {
+    display: none; /* Hidden by default */
+}
+#Quiz-area.hidden {
+    display: none; /* Hide quiz area initially */
+}
