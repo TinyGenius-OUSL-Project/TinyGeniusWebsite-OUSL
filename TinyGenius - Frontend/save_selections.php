@@ -2,15 +2,6 @@
 session_start();
 header('Content-Type: application/json');
 
-// Path to the debug log file
-define('DEBUG_LOG', 'debug.log');
-
-// Function to write to the debug log
-function logDebug($message) {
-    $logMessage = date('Y-m-d H:i:s') . " - " . $message . PHP_EOL;
-    file_put_contents(DEBUG_LOG, $logMessage, FILE_APPEND);
-}
-
 // Database connection details
 $servername = "127.0.0.1:3307";
 $username = "root";
