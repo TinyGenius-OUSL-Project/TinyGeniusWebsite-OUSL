@@ -2,45 +2,35 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Inria Sans', sans-serif;
+    font-family: 'Inria Sans', sans-serif;
 }
 
 body {
     background-image: url('Assets/trackProgress/StockCake-Whimsical\ Storybook\ Illustration_1720789194.jpg');
     background-size: cover;
-    
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: rgba(35, 37, 42, 0.8); /* Fallback background color for browsers that do not support background-attachment */
 }
 
-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(35, 37, 42, 0.8); 
-    z-index: -1;
-}
 
 .container {
     max-width: 1380px;
     margin-top: 5%;
-    margin-left: 5%;
+    margin-left: 2.75%;
     background-color: white;
     border-radius: 3rem;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    height: 500px;
-    
+    height: auto; /* Adjusted height for better spacing */
+    padding: 2rem;
 }
 
 header {
-    background-color: white; 
-    display: -webkit-flex;
+    background-color: white;
+    display: flex;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1rem 2rem;
-    
-    
-    
 }
 
 .nav-container {
@@ -96,64 +86,177 @@ header {
     object-fit: cover;
 }
 
-.select-section {
+.filter-section {
     padding-top: 4rem;
-    padding-left: 12rem;
     display: flex;
-
-}
-
-.select-section label {
+    justify-content: center;
+    align-items: center;
     font-size: 1.7rem;
-    padding-top: 0.5rem;
-    padding-right: 15rem;
-    font-style: normal;
     color: #15373A;
-
-
 }
 
-#grade-btn, #unit-btn {
+.filter-section label {
+    margin-right: 1rem;
+}
+
+#subjectFilter {
     background-color: #f1f1f1;
     border: 1px solid #ccc;
-    padding: 0rem 5rem;
-    font-size: larger;
-    height: 50px;
-    margin-left: 1rem;
+    padding: 0.5rem 2rem;
+    font-size: 1.7rem;
+    height: 40px;
     cursor: pointer;
     background: #F6F6F6;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 3px;
-
+    transition: background-color 0.3s ease;
 }
 
-#grade-btn:hover, #unit-btn:hover {
+#subjectFilter:hover {
     background-color: #e1e1e1;
 }
 
-.progress-bar {
+/* Style for the activities section */
+#recent-activities {
+    margin-top: 2rem;
+    padding-left: 2rem;
+    font-size: 1.2rem;
+}
+
+.activity {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #F8F8F8;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.activity strong {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.activity em {
+    font-size: 1rem;
+    color: #888;
+}
+
+/* Style for subject and topic */
+.activity-topic {
     display: flex;
-    margin-top: 7rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.activity-topic span {
+    font-size: 1rem; /* Reduced font size */
+    color: #333;
+}
+
+.activity-score {
+    font-weight: bold;
+    font-size: 1rem; /* Reduced font size */
+    color: #333;
+}
+
+/* Subject Header */
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    color: #15373A;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .filter-section {
+        font-size: 1.4rem;
+    }
+
+    .activity {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+}
+/* Filter button container */
+.filter-section {
+    display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 2rem;
+    font-size: 1.2rem;
 }
 
-.circle {
-    width: 58px;
-    height: 59px;
-    border-radius: 50%;
-    background-color: #e0e0e0;
-    margin: 0 10px;
-    position: relative;
+/* Filter button style */
+#subjectFilter {
+    background-color: #FCD368; /* Vibrant yellow */
+    color: white;
+    border: none;
+    padding: 0.8rem 3rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50px; /* Round edges for modern look */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    outline: none; /* Remove focus outline */
 }
 
-.line {
-    width: 250px;
-    height: 5px;
-    background-color: #e0e0e0;
+/* Hover effect for filter button */
+#subjectFilter:hover {
+    background-color: #f7ba21; /* Slightly darker yellow on hover */
+    transform: translateY(-2px); /* Subtle lifting effect */
 }
 
-.circle.active, .line.active {
-    background-color: #6FC1BC;
+/* Disabled filter button style */
+#subjectFilter:disabled {
+    background-color: #f0d287; /* Light yellow when disabled */
+    cursor: not-allowed;
+    box-shadow: none;
 }
 
+/* Adjust the select dropdown button */
+#filter {
+    background-color: #fff;
+    border: 1px solid #FCD368; /* Green border to match the button */
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 30px;
+    margin-left: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Hover effect for the select dropdown */
+#filter:hover {
+    background-color: #f0f0f0; /* Light gray background on hover */
+    border-color: #FCD368; /* Green border on hover */
+}
+
+/* Focus effect for the select dropdown */
+#filter:focus {
+    outline: none; /* Remove default focus outline */
+    background-color: red; /* Red background when focused */
+    border-color: red; /* Red border on focus */
+}
+
+/* Remove the blue outline when the select element is focused */
+#filter:focus-visible {
+    outline: none !important; /* Ensure no blue outline */
+    background-color: red !important; /* Red background when focused */
+    border-color: red !important; /* Red border when focused */
+}
+
+/* Ensuring that there's no additional focus outline added */
+#filter:focus:not(:focus-visible) {
+    outline: none;
+    background-color: red; /* Keep red background */
+}
