@@ -13,26 +13,21 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 
 // Check connection
 if (!$conn) {
-    logDebug('Database connection failed: ' . mysqli_connect_error());
     echo json_encode(['success' => false, 'message' => 'Database connection failed: ' . mysqli_connect_error()]);
     exit;
 }
 
 // Ensure the user is authenticated
 if (!isset($_SESSION['user_id'])) {
-    logDebug('User not authenticated.');
     echo json_encode(['success' => false, 'message' => 'User not authenticated.']);
     exit;
 }
 
 $user_id = $_SESSION['user_id']; // Retrieve the logged-in user's ID
-logDebug("User ID: $user_id");
-
 
 // Function to fetch subjects from content.js (simulate it here for PHP)
 function getAllSubjectsFromContentJs() {
-    // Simulate the content.js data structure in PHP (this will be dynamically fetched from content.js in a real application)
-    $content_data = json_decode(file_get_contents('content.json'), true); // Assuming the content is saved in a JSON file or API
+    $content_data = json_decode(file_get_contents('content.json'), true); 
 
     $all_subjects = [];
     foreach ($content_data['gradeContent'] as $grade => $subjects) {
@@ -50,14 +45,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Validate input
     if (empty($data['grade']) || !is_array($data['subjects'])) {
-        logDebug('Invalid input data: ' . json_encode($data));
         echo json_encode(['success' => false, 'message' => 'Invalid input data.']);
         exit;
     }
 
     $grade = $data['grade'];
-    $subjects = json_encode($data['subjects']); // Store subjects as JSON
-    logDebug("Grade: $grade, Subjects: $subjects");
+    $subjects = json_encode($data['subjects']); 
 
     // Check if the selection already exists for this user and grade
     $sql = "SELECT id FROM selections WHERE user_id = ? AND grade = ?";
@@ -75,15 +68,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($update_stmt) {
                 mysqli_stmt_bind_param($update_stmt, "sii", $subjects, $user_id, $grade);
                 if (mysqli_stmt_execute($update_stmt)) {
-                    logDebug("Selections updated successfully for user_id: $user_id, grade: $grade.");
                     echo json_encode(['success' => true, 'message' => 'Selections updated successfully.']);
                 } else {
-                    logDebug('Failed to update selections for user_id: ' . $user_id);
                     echo json_encode(['success' => false, 'message' => 'Failed to update selections.']);
                 }
                 mysqli_stmt_close($update_stmt);
             } else {
-                logDebug('Failed to prepare update query for user_id: ' . $user_id);
                 echo json_encode(['success' => false, 'message' => 'Failed to prepare update query.']);
             }
         } else {
@@ -93,21 +83,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($insert_stmt) {
                 mysqli_stmt_bind_param($insert_stmt, "iis", $user_id, $grade, $subjects);
                 if (mysqli_stmt_execute($insert_stmt)) {
-                    logDebug("Selections saved successfully for user_id: $user_id, grade: $grade.");
                     echo json_encode(['success' => true, 'message' => 'Selections saved successfully.']);
                 } else {
-                    logDebug('Failed to save selections for user_id: ' . $user_id);
                     echo json_encode(['success' => false, 'message' => 'Failed to save selections.']);
                 }
                 mysqli_stmt_close($insert_stmt);
             } else {
-                logDebug('Failed to prepare insert query for user_id: ' . $user_id);
                 echo json_encode(['success' => false, 'message' => 'Failed to prepare insert query.']);
             }
         }
         mysqli_stmt_close($stmt);
     } else {
-        logDebug('Failed to prepare select query for user_id: ' . $user_id);
         echo json_encode(['success' => false, 'message' => 'Failed to prepare select query.']);
     }
 }
