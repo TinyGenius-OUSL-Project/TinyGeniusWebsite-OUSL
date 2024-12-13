@@ -149,15 +149,32 @@ function nextQuestion() {
     }
 }
 
-// Modified function in gr1-english_quiz.js to store score with the topic name
+// Modified function in gr1-english_quiz.js to store score ,time and date with the topic name
 function endQuiz() {
     document.getElementById("Quiz-area").classList.add("hidden");
     document.getElementById("end-message").classList.remove("hidden");
-    document.getElementById("final-score-message").textContent = `You scored ${score} out of ${quizTopics[currentTopic].length}.`;
+    
+    // Capture the current time when the quiz ends
+    const endTime = new Date();
+    const formattedTime = endTime.toLocaleString(); // Format the time
 
-    // Save the score in localStorage with the current topic as the key
-    localStorage.setItem(`${currentTopic}Score`, score);
-    console.log('Score saved for', currentTopic, ':', score);
+    // Display the score and time when the quiz ended
+    document.getElementById("final-score-message").textContent = `You scored ${score} out of ${quizTopics[currentTopic].length}.`;
+    document.getElementById("quiz-end-time").textContent = `Quiz completed at: ${formattedTime}`;
+    
+    // Save the score and time in localStorage
+    const scoreKey = `${currentTopic}Score`;
+    const timeKey = `${currentTopic}Time`;
+    localStorage.setItem(scoreKey, score);
+    localStorage.setItem(timeKey, formattedTime);
+
+    // Log to confirm the values saved
+    console.log('Score and time saved:', {
+        scoreKey: scoreKey,
+        timeKey: timeKey,
+        score: score,
+        time: formattedTime
+    });
 }
 
 
