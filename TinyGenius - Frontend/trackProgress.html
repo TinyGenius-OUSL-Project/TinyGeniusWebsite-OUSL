@@ -60,9 +60,11 @@
                     { name: 'Reading and Writing Basics', id: 'Reading and Writing BasicsScore' }
                 ],
                 maths: [
-                    { name: 'Addition and Subtraction', id: 'Addition and SubtractionScore' },
-                    { name: 'Multiplication and Division', id: 'Multiplication and DivisionScore' },
-                    { name: 'Fractions', id: 'FractionsScore' }
+                    { name: 'Pre-Mathematical Skills', id: 'Pre-Mathematical SkillsScore' },
+                    { name: 'Numbers', id: 'NumbersScore' },
+                    { name: 'Measurements', id: 'MeasurementsScore' },
+                    { name: 'Money', id: 'MoneyScore' },
+                    { name: 'Shapes and Figures', id: 'Shapes and FiguresScore' }
                 ],
                 ict: [
                     { name: 'Basic Computer Skills', id: 'Basic Computer SkillsScore' },
@@ -75,13 +77,17 @@
             const selectedSubjects = subjectFilter === 'all' ? Object.values(subjects).flat() : subjects[subjectFilter];
 
             // Iterate over the selected topics and check if the score is available
+            
             selectedSubjects.forEach(topic => {
                 const score = localStorage.getItem(topic.id);
+                const time = localStorage.getItem(`${topic.name}Time`);
+                console.log('Retrieving score and time for', topic.name, '-> Score:', score, 'Time:', time);
                 if (score) {
                     const activityDiv = document.createElement('div');
                     activityDiv.classList.add('activity');
                     activityDiv.innerHTML = `
                     <em>${topic.name}</em><br>
+                    <small>Completed at: ${time ? time : 'N/A'}</small><br>
                     <span>Score: ${score}/5</span>
                     `;
                     activitiesContainer.appendChild(activityDiv); // Add the activity to the container
@@ -108,3 +114,4 @@
     </script>
 </body>
 </html>
+showScore
