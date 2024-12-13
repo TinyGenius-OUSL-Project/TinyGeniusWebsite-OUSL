@@ -215,12 +215,7 @@ h2 {
     transform: translateY(-2px); /* Subtle lifting effect */
 }
 
-/* Disabled filter button style */
-#subjectFilter:disabled {
-    background-color: #f0d287; /* Light yellow when disabled */
-    cursor: not-allowed;
-    box-shadow: none;
-}
+
 
 /* Adjust the select dropdown button */
 #filter {
@@ -241,22 +236,3 @@ h2 {
     border-color: #FCD368; /* Green border on hover */
 }
 
-/* Focus effect for the select dropdown */
-#filter:focus {
-    outline: none; /* Remove default focus outline */
-    background-color: red; /* Red background when focused */
-    border-color: red; /* Red border on focus */
-}
-
-/* Remove the blue outline when the select element is focused */
-#filter:focus-visible {
-    outline: none !important; /* Ensure no blue outline */
-    background-color: red !important; /* Red background when focused */
-    border-color: red !important; /* Red border when focused */
-}
-
-/* Ensuring that there's no additional focus outline added */
-#filter:focus:not(:focus-visible) {
-    outline: none;
-    background-color: red; /* Keep red background */
-}
