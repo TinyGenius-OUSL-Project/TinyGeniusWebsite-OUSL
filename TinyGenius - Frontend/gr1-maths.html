@@ -35,7 +35,7 @@
                 <span class="content-text">Pre-Mathematical Skills</span>
             </div>
             <div id="Pre-Mathematical" class="options" style="display: none;">
-                <div class="option-item" onclick="window.location.href='https://www.educaplay.com/game/21660299-number_explorers_quiz.html'">Game</div>
+                <div class="option-item" onclick="openGame('https://www.educaplay.com/game/21660299-number_explorers_quiz.html')">Game</div>
                 <div class="option-item" id="Pre-Mathematical-btn" onclick="openQuiz('Pre-Mathematical Skills')">Quiz</div>
             </div>
 
@@ -45,7 +45,7 @@
             </div>
             <div id="Numbers" class="options" style="display: none;">
                 <div class="option-item" onclick="openVideo('Numbers')">Video</div>
-                <div class="option-item" onclick="window.location.href='https://www.educaplay.com/game/21681461-match_the_shapes.html'">Game</div>
+                <div class="option-item" onclick="openGame('https://www.educaplay.com/game/21681461-match_the_shapes.html')">Game</div>
                 <div class="option-item" id="Numbers-btn" onclick="openQuiz('Numbers')">Quiz</div>
             </div>
 
@@ -55,7 +55,7 @@
             </div>
             <div id="Measurements" class="options" style="display: none;">
                 <div class="option-item" onclick="openVideo('Measurements')">Video</div>
-                <div class="option-item" onclick="window.location.href='       '">Game</div>
+                <div class="option-item" onclick="">Game</div>
                 <div class="option-item" id="Measurements-btn" onclick="openQuiz('Measurements')">Quiz</div>
             </div>
 
@@ -122,6 +122,13 @@
         <button onclick="closeQuiz()">Close</button>
     </div>
 </div>
+<script>
+    function openGame(gameUrl) {
+        // Redirect to game.html with the game URL as a query parameter
+        window.location.href = `game.html?gameUrl=${encodeURIComponent(gameUrl)}`;
+    }
+</script>
+
 
 
     <script src="gr1-maths_quiz.js"></script>
