@@ -1,3 +1,19 @@
+<?php 
+session_start();
+require 'db.php'; // Database connection
+include 'nav.php';
+
+// Check if the user is logged in
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
+
+$user_id = $_SESSION['user_id'];
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,6 +21,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TinyGenius - Grade 01 Maths</title>
+    <link rel="stylesheet" href="nav.css">
+
     <link rel="stylesheet" href="subject.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,12 +34,7 @@
 </head>
 
 <body>
-    <nav>
-        <img src="Assets/landing page assets/Tiny2.png" alt="Tiny Genius logo" id="logo">
-        <div class="profile">
-            <a href="Profile.html"><img src="Assets/grades/woman.png" alt="Profile"></a>
-        </div>
-    </nav>
+   
 
     <main>
         <div class="grade-btns">
@@ -62,6 +75,7 @@
     </footer>
 
     <script type="module" src="subject.js"></script>
+    <script type="module" src="nav.js"></script>
 </body>
 
 </html>
