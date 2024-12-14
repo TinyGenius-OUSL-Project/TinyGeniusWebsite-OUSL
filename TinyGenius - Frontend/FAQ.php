@@ -1,9 +1,28 @@
+<?php 
+session_start();
+require 'db.php'; // Database connection
+include 'nav.php';
+
+// Check if the user is logged in
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
+
+$user_id = $_SESSION['user_id'];
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="FAQ.css">
+     <link rel="stylesheet" href="nav.css">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
@@ -17,18 +36,7 @@
 
     <title>Tiny Genius</title>
 </head>
-<body>
-    <body>
-        <nav>
-            <ul>
-                <li>
-                    <img src="Assets//FAQ assets/logo.png" alt="tiny genius logo" id="logo">
-                </li>
-                <li class="listb"><button><img src="Assets/FAQ assets/woman.png" alt=""></button></li>
-                
-            </ul>
-        </nav>
-        
+<body>    
         <section class="sec1">
             <div>
             <h1 class="main-title">How can we Help?</h1>
@@ -97,7 +105,7 @@
           
             // Initialize with the first FAQ
             updateFAQ(currentIndex);
-          </script>\
+          </script>
 
 
 
@@ -130,7 +138,7 @@
           </div>
         </div>
       </footer>
-        
+        <script src ="nav.js"></script>
         
 </body>
 </html>
