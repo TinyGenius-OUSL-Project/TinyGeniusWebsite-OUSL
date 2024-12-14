@@ -21,29 +21,19 @@ $user_id = $_SESSION['user_id'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Progress</title>
     <link rel="stylesheet" href="trackProgress.css">
+    <link rel="stylesheet" href="nav.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <header>
-        <div class="nav-container">
-            <div class="back-profile">
-                <a href="#">
-                    <span class="back-arrow">&larr;</span>
-                    <span class="profile-text">Profile</span>
-                </a>
-            </div>
-            <div class="nav-right">
-                <div class="profile">
-                    <a href="#"><img src="Assets/grades/woman.png" alt="Profile"></a>
-                </div>
-            </div>
-        </div>
-    </header>
     
     <div class="container">
         <!-- Subject Filter Dropdown -->
         <div class="filter-container">
-            <label id="label-heading">Quiz Marks Filter by Subjects </label><br><br>
+            <label for="subjectFilter">Quiz Marks Filter by Subjects </label>
             <select id="subjectFilter">
                 <option value="all">All Subjects</option>
                 <option value="english">English</option>
@@ -127,5 +117,8 @@ $user_id = $_SESSION['user_id'];
             showScore(selectedSubject); // Show scores for the selected subject
         });
     </script>
+    <script src="nav.js"></script>
 </body>
 </html>
+showScore
+
