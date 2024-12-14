@@ -62,7 +62,7 @@ $user_id = $_SESSION['user_id'];
             <p>
                 View your completed games and lessons to see how far you've come. Check your progress across different subjects and celebrate your achievements!
             </p>
-            <a href="track_progress.html" class="track-progress-link"><button class="track-btn">TRACK PROGRESS</button></a>
+            <a href="trackProgress.php" class="track-progress-link"><button class="track-btn">TRACK PROGRESS</button></a>
         </div>
     </section>
 
