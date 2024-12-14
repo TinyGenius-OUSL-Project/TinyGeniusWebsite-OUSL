@@ -53,6 +53,12 @@ nav {
     margin-left: 10px;
 }
 
+.dropdown-item i {
+    margin-right: 10px; 
+    color: #ffca0b;
+    font-size: 1.2rem; 
+}
+
 .dropdown-menu {
     display: none;
     width: 15rem;
