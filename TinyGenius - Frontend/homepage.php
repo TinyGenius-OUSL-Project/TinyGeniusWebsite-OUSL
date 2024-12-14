@@ -13,6 +13,7 @@ $user_id = $_SESSION['user_id'];
 
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -95,8 +96,6 @@ $user_id = $_SESSION['user_id'];
         </div>
         <img src="assets/home page assets/funpic.png" alt="">
     </section>
-
-    
     
 
     <footer>
@@ -118,3 +117,4 @@ $user_id = $_SESSION['user_id'];
 
 </body>
 </html>
+
