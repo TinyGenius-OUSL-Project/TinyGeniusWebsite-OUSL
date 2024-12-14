@@ -6,7 +6,7 @@ const contentData = {
       {
         subject: "MATHS",
         img: "Assets/home page assets/subs/doodle maths (2).jpg",
-        link: "subject.html",
+        link: "subject.php",
         units: [
           {
             unitTitle: "Pre-mathematical skills",
@@ -111,7 +111,7 @@ const contentData = {
       {
         subject: "ENGLISH",
         img: "Assets/home page assets/subs/doodle eng.jpg",
-        link: "subject.html",
+        link: "gr1-english.php",
         units: [
         ],
       },
