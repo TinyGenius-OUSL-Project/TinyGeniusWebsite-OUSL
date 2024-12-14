@@ -1,35 +1,19 @@
-
-
-document.addEventListener("DOMContentLoaded", () => {
-    const dropdownMenu = document.querySelector(".dropdown-menu");
-    const dropdownIcon = document.querySelector(".dropdown-icon");
-    const dropdownItems = document.querySelectorAll(".dropdown-item");
-
-
-    // Toggle Dropdown on Icon Click
-    dropdownIcon.addEventListener("click", (e) => {
-        e.stopPropagation(); // Prevent click from bubbling up
-        dropdownMenu.classList.toggle("open");
-        dropdownIcon.setAttribute(
-            "aria-expanded",
-            dropdownMenu.classList.contains("open")
-        );
-    });
-
-    // Hide Dropdown When an Item is Selected
-    dropdownItems.forEach((item) => {
-        item.addEventListener("click", () => {
-            dropdownMenu.classList.remove("open");
-            dropdownIcon.setAttribute("aria-expanded", "false");
-        });
-    });
-
-    // Hide Dropdown When Clicking Outside
-    document.addEventListener("click", () => {
-        if (dropdownMenu.classList.contains("open")) {
-            dropdownMenu.classList.remove("open");
-            dropdownIcon.setAttribute("aria-expanded", "false");
+function toggleDropdown() {
+    var dropdown = document.getElementById("dropdownMenu");
+    if (dropdown.style.display === "none" || dropdown.style.display === "") {
+        dropdown.style.display = "block";
+    } else {
+        dropdown.style.display = "none";
+    }
+}
+window.onclick = function(event) {
+    if (!event.target.matches('.dropdown-icon') && !event.target.matches('.profile-pic')) {
+        var dropdowns = document.getElementsByClassName("dropdown-menu");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.style.display === "block") {
+                openDropdown.style.display = "none";
+            }
         }
-    });
-
-});
+    }
+}
