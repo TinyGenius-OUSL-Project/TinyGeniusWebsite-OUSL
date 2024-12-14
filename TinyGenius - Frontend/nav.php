@@ -35,7 +35,7 @@ $profilePicture = $_SESSION['profile_picture'] ?? 'uploads/default_profile.png';
                     <li><a href="homepage.php" class="dropdown-item"><i class="fas fa-home"></i> Home</a></li>
                     <li><a href="taskselection.php" class="dropdown-item"><i class="fas fa-book"></i> Subjects</a></li>
                     <li><a href="trackProgress.php" class="dropdown-item"><i class="fas fa-chart-line"></i> Track Progress</a></li>
-                    <li><a href="FAQ.php" class="dropdown-item"><i class="fas fa-question-circle"></i> Q&A</a></li>
+                    <li><a href="FAQ.php" class="dropdown-item"><i class="fas fa-question-circle"></i> FAQ</a></li>
                     <li><a href="profile.php" class="dropdown-item"><i class="fas fa-user-cog"></i> Profile Settings</a></li>
                     <li><a href="logout.php" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Log Out</a></li>
                 </ul>
