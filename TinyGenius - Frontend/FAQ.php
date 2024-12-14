@@ -3,7 +3,7 @@ session_start();
 require 'db.php'; // Database connection
 include 'nav.php';
 
-// Check if the user is logged in
+//Check if the user is logged in
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
     exit();
@@ -13,17 +13,18 @@ $user_id = $_SESSION['user_id'];
 
 ?>
 
-
-
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="FAQ.css">
-     <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="nav.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,12 +32,16 @@ $user_id = $_SESSION['user_id'];
     <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 
-    <title>Tiny Genius</title>
+
+    <title>TinyGenius</title>
 </head>
-<body>    
+<body>
+    <body>
+
+        
         <section class="sec1">
             <div>
             <h1 class="main-title">How can we Help?</h1>
@@ -55,7 +60,7 @@ $user_id = $_SESSION['user_id'];
           </section>
 
           
-
+<!-- 
           <script>
             // Questions and Answers 
             const faqs = [
@@ -105,7 +110,7 @@ $user_id = $_SESSION['user_id'];
           
             // Initialize with the first FAQ
             updateFAQ(currentIndex);
-          </script>
+          </script>\ -->
 
 
 
@@ -120,25 +125,22 @@ $user_id = $_SESSION['user_id'];
 
         
 
-        
-        <footer class="footer">
-        <div class="footer-content">
-          <div class="footer-grid">
-            <div class="footer-nav">
-              <a href="#about" class="nav-button">About Us</a>
-              <a href="#contact" class="nav-button">Contact Us</a>
-              <a href="#privacy" class="nav-button">Privacy Policy</a>
-            </div>
-            <div class="social-links">
-              <a href="#" aria-label="Facebook"><img src="Assets/FAQ assets/facebook.png" alt="" class="social-icon" /></a>
-              <a href="#" aria-label="Twitter"><img src="Assets/FAQ assets/instagram.png" alt="" class="social-icon" /></a>
-              <a href="#" aria-label="Instagram"><img src="Assets/FAQ assets/twitter.png" alt="" class="social-icon" /></a>
-            </div>
-            <p class="copyright">Copyright © 2023 Tiny Genius All rights reserved. Website Designed & Developed by Tiny Genius team</p>
-          </div>
-        </div>
-      </footer>
-        <script src ="nav.js"></script>
+                
+            <footer>
+                <div class="footer-btns">
+                    <button>ABOUT US</button>
+                    <button>CONTACT US</button>
+                    <button>PRIVACY POLICY</button>
+                </div>
+                <div class="footer-social">
+                    <img src="Assets/landing page assets/facebook.png" alt="">
+                    <img src="Assets/landing page assets/instagram.png" alt="">
+                    <img src="Assets/landing page assets/twitter.png" alt="">
+                </div>
+                <p>&copy; 2023 Tiny Genius. All rights reserved. Website Designed & Developed by Tiny Genius team</p>
+            </footer>
+                
         
 </body>
 </html>
+
