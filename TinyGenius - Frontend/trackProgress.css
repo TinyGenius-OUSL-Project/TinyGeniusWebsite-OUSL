@@ -63,27 +63,11 @@ header {
     align-items: center;
 }
 
-.track-progress-btn {
-    background-color: white;
-    border: 2px solid #FCD368;
-    padding: 0.9rem 3rem;
-    border-radius: 2rem;
-    font-weight: bold;
-    cursor: pointer;
-    margin-right: 1rem;
-    font-size: 1rem;
-}
-
-.track-progress-btn:hover {
-    background-color: #FCD368;
-    transition: 0.3s;
-}
-
-.profile-picture img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
+.profile img {
+    margin: 0.1875rem 3.75rem 0 0; /* 3px, 60px */
+    border-radius: 100%;
+    width: 3.125rem; /* 50px */
+    height: 3.125rem; /* 50px */
 }
 
 .filter-section {
@@ -97,23 +81,6 @@ header {
 
 .filter-section label {
     margin-right: 1rem;
-}
-
-#subjectFilter {
-    background-color: #f1f1f1;
-    border: 1px solid #ccc;
-    padding: 0.5rem 2rem;
-    font-size: 1.7rem;
-    height: 40px;
-    cursor: pointer;
-    background: #F6F6F6;
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 3px;
-    transition: background-color 0.3s ease;
-}
-
-#subjectFilter:hover {
-    background-color: #e1e1e1;
 }
 
 /* Style for the activities section */
@@ -185,21 +152,15 @@ h2 {
         font-size: 1rem;
     }
 }
-/* Filter button container */
-.filter-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
-    font-size: 1.2rem;
-}
+
 
 /* Filter button style */
 #subjectFilter {
     background-color: #FCD368; /* Vibrant yellow */
     color: white;
     border: none;
-    padding: 0.8rem 3rem;
+    padding: 1rem 3.5rem; /* Adjust padding to control size */
+    padding-right: 3.5rem; /* Extra padding for dropdown arrow spacing */
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
@@ -207,6 +168,18 @@ h2 {
     transition: background-color 0.3s ease, transform 0.3s ease;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
     outline: none; /* Remove focus outline */
+    appearance: none; /* Hide default arrow for customization */
+    -webkit-appearance: none; /* For Safari */
+    -moz-appearance: none; /* For Firefox */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><polygon points="0,0 10,0 5,5" fill="white"/></svg>');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 1rem) center; /* Position dropdown arrow */
+    background-size: 1rem; /* Control size of arrow */
+}
+
+#subjectFilter option:hover {
+    background-color: #99bbb0b9;
+    color: white;
 }
 
 /* Hover effect for filter button */
@@ -215,24 +188,10 @@ h2 {
     transform: translateY(-2px); /* Subtle lifting effect */
 }
 
+#label-heading {
+    font-size: 2rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 
-
-/* Adjust the select dropdown button */
-#filter {
-    background-color: #fff;
-    border: 1px solid #FCD368; /* Green border to match the button */
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-    font-weight: 500;
-    border-radius: 30px;
-    margin-left: 1rem;
-    cursor: pointer;
-    transition: 0.3s ease;
 }
 
-/* Hover effect for the select dropdown */
-#filter:hover {
-    background-color: #f0f0f0; /* Light gray background on hover */
-    border-color: #FCD368; /* Green border on hover */
-}
 
