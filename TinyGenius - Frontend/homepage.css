@@ -10,112 +10,10 @@ html, body {
     scrollbar-width: none;  /* Firefox */
 }
 
-/* Navigation Bar */
-nav {
-    background-color: #FCFCFC;
-    padding: 1.875rem; /* 30px */
-    position: fixed;
-    width: 100%;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1000;
-    height: 0.9375rem; /* 15px */
-}
 
-#logo {
-    margin: 0 54.6875rem 0 -2.5rem; /* 875px, -40px */
-    width: 15.625rem; /* 250px */
-    height: auto;
-    float: left;
-}
 
-/*dropdown*/
-.user-info {
-    display: flex;
-    align-items: center;
-    gap: 0.625rem;
-    position: relative;
-}
-
-.username {
-    font-family: "Inria Sans", sans-serif;
-    font-weight: 550;
-    font-size: 1.25rem;
-    color: #15373A;
-}
-
-.dropdown-menu li {
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    font-family: "Inria Sans", sans-serif;
-    font-size: 1rem;
-    color: #15373A;
-}
-
-.dropdown-menu li:hover {
-    cursor: pointer;
-    background-color:#ecffa2;
-
-}
-
-.dropdown-icon{
-    cursor: pointer;
-}
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    list-style: none;
-    padding: 8px 0;
-    min-width: 150px;
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    transform: translateY(-10px);
-}
-
-.dropdown-menu.open {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
-}
-.profile {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    right: 10rem; /* Move to the left of the navbar */
-    gap: 0.5rem;
-}
-
-.profile img {
-    border-radius: 50%;
-    width: 3.125rem;
-    height: 3.125rem;
-    
-}
-/* 
-.profile img {
-    margin: 0.1875rem 3.75rem 0 0; /* 3px, 60px */
-/*     border-radius: 100%;
-    width: 3.125rem; 
-    height: 3.125rem; 
-}
-  */
 .grade-btns {
     background-image: url("Assets/landing page assets/StockCake-Whimsical Storybook Illustration_1720789194.jpg");
-    /*
-    background-image: 
-        linear-gradient(to left, rgba(111, 167, 179, 1) 0%, rgba(111, 167, 179, 0.5) 50%),
-        url("Assets/landing page assets/StockCake-Whimsical Storybook Illustration_1720789194.jpg");
-    */
     background-size: cover; 
     background-repeat: no-repeat;
     background-position: center;
@@ -565,17 +463,3 @@ footer p {
     pointer-events: none; 
     color: #484848;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
