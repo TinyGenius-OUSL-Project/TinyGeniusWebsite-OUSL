@@ -1,19 +1,33 @@
+<?php 
+session_start();
+require 'db.php'; // Database connection
+include 'nav.php';
+
+// Check if the user is logged in
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
+
+$user_id = $_SESSION['user_id'];
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TinyGenius - Grade 01 English</title>
+    <link rel="stylesheet" href="nav.css">
+
     <link rel="stylesheet" href="gr1-subject.css">
     <link rel="stylesheet" href="gr1-quiz.css">
+
 </head>
 <body>
-    <nav>
-        <img src="Assets/landing page assets/Tiny2.png" alt="Tiny Genius logo" id="logo">
-        <div class="profile">
-            <a href="#"><img src="Assets/grades/woman.png" alt="Profile"></a>
-        </div>
-    </nav>
 
     <main>
         <div class="grade-btns">
@@ -34,7 +48,7 @@
                 <span class="content-text">Alphabet and Phonics</span>
             </div>
             <div id="alphabet-phonics" class="options" style="display: none;">
-                <div class="option-item" onclick="openGame('https://www.educaplay.com/game/21792062-phonic_picture_match.html')">Game</div>
+                <div class="option-item" onclick="window.location.href='https://www.educaplay.com/learning-resources/21792062-phonic_picture_match.html'">Game</div>
                 <div class="option-item" id="alphabet-phonics-btn" onclick="openQuiz('Alphabet and Phonics')">Quiz</div>
             </div>
 
@@ -44,7 +58,7 @@
             </div>
             <div id="basic-vocabulary" class="options" style="display: none;">
                 <div class="option-item" onclick="openVideo('basic-vocabulary')">Video</div>
-                <div class="option-item" onclick="openGame('https://www.educaplay.com/game/21792292-basic_vocabulary.html')">Game</div>
+                <div class="option-item" onclick="window.location.href='https://www.educaplay.com/game/21792292-basic_vocabulary.html'">Game</div>
                 <div class="option-item" id="basic-vocabulary-btn" onclick="openQuiz('Basic Vocabulary')">Quiz</div>
             </div>
 
@@ -54,7 +68,7 @@
             </div>
             <div id="simple-sentences" class="options" style="display: none;">
                 <div class="option-item" onclick="openVideo('simple-sentences')">Video</div>
-                <div class="option-item" onclick="openGame('https://www.educaplay.com/game/21792408-simple_sentences_quiz_game.html')">Game</div>
+                <div class="option-item" onclick="window.location.href='https://www.educaplay.com/game/21792408-simple_sentences_quiz_game.html'">Game</div>
                 <div class="option-item" id="simple-sentences-btn" onclick="openQuiz('Simple Sentences')">Quiz</div>
             </div>
 
@@ -63,7 +77,7 @@
                 <span class="content-text">Listening and Speaking</span>
             </div>
             <div id="listening-speaking" class="options" style="display: none;">
-                <div class="option-item" onclick="openGame('https://www.educaplay.com/game/21792527-listening_and_speaking.html')">Game</div>
+                <div class="option-item" onclick="window.location.href='https://www.educaplay.com/game/21792527-listening_and_speaking.html'">Game</div>
                 <div class="option-item" id="listening-speaking-btn" onclick="openQuiz('Listening and Speaking')">Quiz</div>
             </div>
 
@@ -83,7 +97,7 @@
             <p>
                 View your quiz scores. Check your progress across different subjects and celebrate your achievements!
             </p>
-            <a href="trackProgress.php"><button class="track-btn">TRACK PROGRESS</button></a>
+            <a href="trackProgress.html"><button class="track-btn">TRACK PROGRESS</button></a>
         </div>
     </section>
 
@@ -120,15 +134,10 @@
         <button onclick="closeQuiz()">Close</button>
     </div>
 </div>
-<script>
-    function openGame(gameUrl) {
-        // Redirect to game.html with the game URL as a query parameter
-        window.location.href = `game.html?gameUrl=${encodeURIComponent(gameUrl)}`;
-    }
-</script>
-
 
 
     <script src="gr1-english_quiz.js"></script>
+    <script src="nav.js"></script>
 </body>
 </html>
+
