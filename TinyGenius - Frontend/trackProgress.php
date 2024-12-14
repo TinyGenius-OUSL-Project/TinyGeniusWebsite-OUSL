@@ -1,3 +1,19 @@
+<?php 
+session_start();
+require 'db.php'; // Database connection
+include 'nav.php';
+
+// Check if the user is logged in
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
+
+$user_id = $_SESSION['user_id'];
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,25 +21,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Progress</title>
     <link rel="stylesheet" href="trackProgress.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <header>
-        <div class="nav-container">
-            <div class="back-profile">
-                <a href="#">
-                    <span class="back-arrow">&larr;</span>
-                    <span class="profile-text">Profile</span>
-                </a>
-            </div>
-            <div class="nav-right">
-                <button class="track-progress-btn">TRACK PROGRESS</button>
-                <div class="profile-picture">
-                    <img src="Assets/trackProgress/StockCake-Karate Kid Pose_1727687860.jpg" alt="Profile Image">
-                </div>
-            </div>
-        </div>
-    </header>
     
     <div class="container">
         <!-- Subject Filter Dropdown -->
@@ -114,3 +118,4 @@
     </script>
 </body>
 </html>
+showScore
