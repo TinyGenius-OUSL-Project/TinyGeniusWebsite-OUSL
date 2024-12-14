@@ -12,23 +12,6 @@ html, body {
     background-blend-mode: overlay;
 }
 
-#back-arrow {
-    width: 1.375rem;
-    height: auto;
-    transform: rotate(180deg);
-    padding-left: 0.625rem;
-    margin-top: 0.1875rem;
-}
-
-#back {
-    width: 15.625rem;
-    height: auto;
-    font-size: 1.875rem;
-    color: #15373A;
-    font-family: "Inria Sans", sans-serif;
-    font-weight: 550;
-}
-
 .profile{
     margin-right: 1rem;
 }
