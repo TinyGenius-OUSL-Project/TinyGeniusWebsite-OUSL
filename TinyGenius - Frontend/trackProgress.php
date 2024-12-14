@@ -120,5 +120,4 @@ $user_id = $_SESSION['user_id'];
     <script src="nav.js"></script>
 </body>
 </html>
-showScore
 
