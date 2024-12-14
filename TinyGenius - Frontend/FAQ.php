@@ -39,8 +39,6 @@ $user_id = $_SESSION['user_id'];
     <title>TinyGenius</title>
 </head>
 <body>
-    <body>
-
         
         <section class="sec1">
             <div>
@@ -138,6 +136,7 @@ $user_id = $_SESSION['user_id'];
             // Initialize with the first FAQ
             updateFAQ(currentIndex);
           </script>
+        <script src="nav.js"></script>
 
 
                 
