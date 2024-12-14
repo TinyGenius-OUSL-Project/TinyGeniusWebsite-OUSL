@@ -34,7 +34,7 @@
                 <span class="content-text">Alphabet and Phonics</span>
             </div>
             <div id="alphabet-phonics" class="options" style="display: none;">
-                <div class="option-item" onclick="window.location.href='https://www.educaplay.com/learning-resources/21792062-phonic_picture_match.html'">Game</div>
+                <div class="option-item" onclick="openGame('https://www.educaplay.com/game/21792062-phonic_picture_match.html')">Game</div>
                 <div class="option-item" id="alphabet-phonics-btn" onclick="openQuiz('Alphabet and Phonics')">Quiz</div>
             </div>
 
@@ -44,7 +44,7 @@
             </div>
             <div id="basic-vocabulary" class="options" style="display: none;">
                 <div class="option-item" onclick="openVideo('basic-vocabulary')">Video</div>
-                <div class="option-item" onclick="window.location.href='https://www.educaplay.com/game/21792292-basic_vocabulary.html'">Game</div>
+                <div class="option-item" onclick="openGame('https://www.educaplay.com/game/21792292-basic_vocabulary.html')">Game</div>
                 <div class="option-item" id="basic-vocabulary-btn" onclick="openQuiz('Basic Vocabulary')">Quiz</div>
             </div>
 
@@ -54,7 +54,7 @@
             </div>
             <div id="simple-sentences" class="options" style="display: none;">
                 <div class="option-item" onclick="openVideo('simple-sentences')">Video</div>
-                <div class="option-item" onclick="window.location.href='https://www.educaplay.com/game/21792408-simple_sentences_quiz_game.html'">Game</div>
+                <div class="option-item" onclick="openGame('https://www.educaplay.com/game/21792408-simple_sentences_quiz_game.html')">Game</div>
                 <div class="option-item" id="simple-sentences-btn" onclick="openQuiz('Simple Sentences')">Quiz</div>
             </div>
 
@@ -63,7 +63,7 @@
                 <span class="content-text">Listening and Speaking</span>
             </div>
             <div id="listening-speaking" class="options" style="display: none;">
-                <div class="option-item" onclick="window.location.href='https://www.educaplay.com/game/21792527-listening_and_speaking.html'">Game</div>
+                <div class="option-item" onclick="openGame('https://www.educaplay.com/game/21792527-listening_and_speaking.html')">Game</div>
                 <div class="option-item" id="listening-speaking-btn" onclick="openQuiz('Listening and Speaking')">Quiz</div>
             </div>
 
@@ -120,6 +120,13 @@
         <button onclick="closeQuiz()">Close</button>
     </div>
 </div>
+<script>
+    function openGame(gameUrl) {
+        // Redirect to game.html with the game URL as a query parameter
+        window.location.href = `game.html?gameUrl=${encodeURIComponent(gameUrl)}`;
+    }
+</script>
+
 
 
     <script src="gr1-english_quiz.js"></script>
