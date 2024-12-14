@@ -1,9 +1,25 @@
+<?php 
+session_start();
+require 'db.php'; // Database connection
+include 'nav.php';
+
+// Check if the user is logged in
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
+
+$user_id = $_SESSION['user_id'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="nav.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,35 +28,7 @@
 
     <title>Tiny Genius</title>
 </head>
-<body data-user-id="<?php echo $user_id; ?>">
-
-        <nav>
-        <img src="Assets/landing page assets/Tiny2.png" alt="Tiny Genius logo" id="logo">
-        <div class="profile">
-            <a href="Profile.html"><img src="Assets/grades/woman.png" alt="Profile"></a>
-        </div>
-    </nav>
-
-<!--     <nav>
-        <img src="Assets/landing page assets/Tiny2.png" alt="Tiny Genius logo" id="logo">
-        <div class="profile">
-      
-        <img id="profile-img" src="Assets/grades/placeholder.png" alt="Profile Picture" class="profile-img">
-          <div class="user-info">
-                <span id="username" class="username"><?php echo $username; ?></span>
-                <span class="dropdown-icon">&#x25BC;</span>
-                <ul class="dropdown-menu">
-                    <li><a href="HomePage.html" class="dropdown-item">Home</a></li>
-                    <li><a href="#" class="dropdown-item">Track Progress</a></li>
-                    <li><a href="grades.html" class="dropdown-item">Grade</a></li>
-                    <li><a href="HomePage.html" class="dropdown-item">Q&A</a></li>
-                    <li><a href="Profile.html" class="dropdown-item">Profile Settings</a></li>
-                    <li><a href="logout.php" class="dropdown-item">Log Out</a></li>
-                </ul>
-            </div> 
-    </div>
-    </nav> -->
-
+<body>
     <div class="grade-btns">
         <div class="scroll1">
             <img src="Assets/grades/cartoon-7419926.png" alt="" id="character">
@@ -126,6 +114,7 @@
     </footer>
 
     <script type="module" src="homepage.js"></script>
+    <script src="nav.js"></script>
 
 </body>
 </html>
