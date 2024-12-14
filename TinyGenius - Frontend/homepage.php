@@ -28,7 +28,7 @@ $user_id = $_SESSION['user_id'];
 
     <title>Tiny Genius</title>
 </head>
-<<body data-user-id="<?php echo $user_id; ?>">>
+<<body data-user-id="<?php echo $user_id; ?>">
     <div class="grade-btns">
         <div class="scroll1">
             <img src="Assets/grades/cartoon-7419926.png" alt="" id="character">
