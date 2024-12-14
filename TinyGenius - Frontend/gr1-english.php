@@ -97,7 +97,7 @@ $user_id = $_SESSION['user_id'];
             <p>
                 View your quiz scores. Check your progress across different subjects and celebrate your achievements!
             </p>
-            <a href="trackProgress.html"><button class="track-btn">TRACK PROGRESS</button></a>
+            <a href="trackProgress.php"><button class="track-btn">TRACK PROGRESS</button></a>
         </div>
     </section>
 
