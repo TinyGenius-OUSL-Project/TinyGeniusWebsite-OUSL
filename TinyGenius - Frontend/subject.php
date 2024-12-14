@@ -40,7 +40,7 @@ $user_id = $_SESSION['user_id'];
         <div class="grade-btns">
             <div class="scroll1">
                 <div class="grade-btns-container">
-                    <a href="homepage.html" id="grade-title">
+                    <a href="homepage.php" id="grade-title">
                         <h3>&lt; </h3>
                     </a>
                     <h1 id="subject-title"></h1>
