@@ -59,8 +59,35 @@ $user_id = $_SESSION['user_id'];
             </div>
           </section>
 
-          
-<!-- 
+
+
+          <section class="submit-section">
+            <form class="submit-form" action="http://localhost/submit_question.php" method="POST">
+              <h2 class="submit-title">Submit your question !</h2>
+              
+              <input type="text" id="questionInput" name="question" class="question-input" placeholder="Write your question..." aria-label="Write your question" required />
+              <button type="submit" class="submit-button">Submit</button>
+            </form>
+          </section>
+
+        
+
+                
+            <footer>
+                <div class="footer-btns">
+                    <button>ABOUT US</button>
+                    <button>CONTACT US</button>
+                    <button>PRIVACY POLICY</button>
+                </div>
+                <div class="footer-social">
+                    <img src="Assets/landing page assets/facebook.png" alt="">
+                    <img src="Assets/landing page assets/instagram.png" alt="">
+                    <img src="Assets/landing page assets/twitter.png" alt="">
+                </div>
+                <p>&copy; 2023 Tiny Genius. All rights reserved. Website Designed & Developed by Tiny Genius team</p>
+            </footer>
+
+        
           <script>
             // Questions and Answers 
             const faqs = [
@@ -110,35 +137,9 @@ $user_id = $_SESSION['user_id'];
           
             // Initialize with the first FAQ
             updateFAQ(currentIndex);
-          </script>\ -->
+          </script>
 
 
-
-          <section class="submit-section">
-            <form class="submit-form" action="http://localhost/submit_question.php" method="POST">
-              <h2 class="submit-title">Submit your question !</h2>
-              
-              <input type="text" id="questionInput" name="question" class="question-input" placeholder="Write your question..." aria-label="Write your question" required />
-              <button type="submit" class="submit-button">Submit</button>
-            </form>
-          </section>
-
-        
-
-                
-            <footer>
-                <div class="footer-btns">
-                    <button>ABOUT US</button>
-                    <button>CONTACT US</button>
-                    <button>PRIVACY POLICY</button>
-                </div>
-                <div class="footer-social">
-                    <img src="Assets/landing page assets/facebook.png" alt="">
-                    <img src="Assets/landing page assets/instagram.png" alt="">
-                    <img src="Assets/landing page assets/twitter.png" alt="">
-                </div>
-                <p>&copy; 2023 Tiny Genius. All rights reserved. Website Designed & Developed by Tiny Genius team</p>
-            </footer>
                 
         
 </body>
