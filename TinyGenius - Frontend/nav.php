@@ -33,7 +33,7 @@ $profilePicture = $_SESSION['profile_picture'] ?? 'uploads/default_profile.png';
                 <span  class="dropdown-icon" onclick="toggleDropdown()">&#x25BC;</span>
                 <ul class="dropdown-menu" id="dropdownMenu">
                     <li><a href="homepage.php" class="dropdown-item"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="taskselection.php" class="dropdown-item"><i class="fas fa-book"></i> Subjects</a></li>
+                    <li><a href="taskselection.php" class="dropdown-item"><i class="fas fa-book"></i> Assign Subjects</a></li>
                     <li><a href="trackProgress.php" class="dropdown-item"><i class="fas fa-chart-line"></i> Track Progress</a></li>
                     <li><a href="FAQ.php" class="dropdown-item"><i class="fas fa-question-circle"></i> FAQ</a></li>
                     <li><a href="profile.php" class="dropdown-item"><i class="fas fa-user-cog"></i> Profile Settings</a></li>
