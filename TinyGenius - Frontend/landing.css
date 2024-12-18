@@ -273,3 +273,73 @@ nav ul li a:hover {
     opacity: 0.7;
 }
 
+
+/* Video Container */
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* background-color: #000; */
+    color: #fff;
+    position: relative;
+}
+
+
+video {
+    width: 80%;
+    max-width: 720px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.video-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.video-controls button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.video-controls button:hover {
+    background-color: #0056b3;
+}
+
+.skip-button-container {
+    margin-top: 20px;
+}
+
+.skip-button-container button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.skip-button-container button:hover {
+    background-color: #1e7e34;
+}
+
+/* Main Content */
+.hidden {
+    display: none;
+}
+
+#main-content {
+    text-align: center;
+    padding: 50px;
+}
