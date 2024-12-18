@@ -295,8 +295,9 @@ video {
 }
 
 .video-controls button {
-    background-color: #007bff;
-    color: white;
+    background-color: #ffffff;
+    color: rgb(4, 81, 126);
+    font-weight: bold;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -306,7 +307,7 @@ video {
 }
 
 .video-controls button:hover {
-    background-color: #0056b3;
+    background-color: #ffff9c;
 }
 
 .skip-button-container {
