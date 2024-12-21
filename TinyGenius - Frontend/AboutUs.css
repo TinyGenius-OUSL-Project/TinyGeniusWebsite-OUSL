@@ -5,8 +5,8 @@ html, body {
   font-weight: 400;
   background-color: #4A868F;
   overflow-x: hidden;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
 }
 
 
@@ -106,7 +106,6 @@ html, body {
   text-align: center;
   font-size: 5rem; 
   font-style: normal;
-  /* font-family: "Inria Sans", sans-serif; */
   font-family: "Butterfly Kids", cursive;
   font-weight: 600;
 }
@@ -442,7 +441,7 @@ html, body {
 
 /* Style for the popup */
 .popup {
-  display: none; /* Hide the popup by default */
+  display: none;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -460,12 +459,12 @@ html, body {
 }
 .popup button {
   padding: 10px 20px;
-  background-color: #ffb907; /* Updated background color */
+  background-color: #ffb907; 
   color: white;
   border: none;
   cursor: pointer;
 }
 
 .popup button:hover {
-  background-color: #e1a300; /* Optional: a slightly darker shade for hover effect */
+  background-color: #e1a300;
 }
