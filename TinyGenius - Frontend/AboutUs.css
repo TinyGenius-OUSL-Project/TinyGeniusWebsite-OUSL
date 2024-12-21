@@ -5,8 +5,8 @@ html, body {
   font-weight: 400;
   background-color: #4A868F;
   overflow-x: hidden;
-  -ms-overflow-style: none; 
-  scrollbar-width: none; 
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 
@@ -106,6 +106,7 @@ html, body {
   text-align: center;
   font-size: 5rem; 
   font-style: normal;
+  /* font-family: "Inria Sans", sans-serif; */
   font-family: "Butterfly Kids", cursive;
   font-weight: 600;
 }
@@ -437,34 +438,4 @@ html, body {
 
 .social-icon img:hover {
   opacity: 0.7;
-}
-
-/* Style for the popup */
-.popup {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 20px;
-  background-color: #f4f4f4;
-  border: 1px solid #ddd;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-  text-align: center;
-}
-
-.popup .popup-content {
-  padding: 20px;
-}
-.popup button {
-  padding: 10px 20px;
-  background-color: #ffb907; 
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.popup button:hover {
-  background-color: #e1a300;
 }
