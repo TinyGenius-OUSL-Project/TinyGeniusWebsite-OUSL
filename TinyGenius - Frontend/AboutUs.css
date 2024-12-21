@@ -440,3 +440,32 @@ html, body {
   opacity: 0.7;
 }
 
+/* Style for the popup */
+.popup {
+  display: none; /* Hide the popup by default */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  text-align: center;
+}
+
+.popup .popup-content {
+  padding: 20px;
+}
+.popup button {
+  padding: 10px 20px;
+  background-color: #ffb907; /* Updated background color */
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.popup button:hover {
+  background-color: #e1a300; /* Optional: a slightly darker shade for hover effect */
+}
