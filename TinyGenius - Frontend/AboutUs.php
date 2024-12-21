@@ -33,99 +33,108 @@ $user_id = $_SESSION['user_id'];
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 
-    <title>Tiny Genius</title>
+
+<title>Tiny Genius</title>
 </head>
-<body>
-   
-        
-    <section class="sec1">
+<body data-user-id="<?php echo $user_id; ?>">
+    <div class="grade-btns">
         <div class="scroll1">
-            <p>
-                Our Mission is to provide <br> an engaging educational <br> platform for children.
-            </p>
+            <div class="grade-banner" id="grade-banner">
+                <p>
+                    Our Mission is to provide <br> an engaging educational <br> platform for children.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="about-container">
+        <h1>About Us</h1>
+        <div class="about-description">
+        <p>A personalized learning platform for 4 - 8 ages with interesting<br />
+            school syllabus contents with quizzes, and interactive games<br />
+            to empower kids to study at their own pace by including<br />
+            Mathematics, English and more subjects.</p>
+        </div></div>
+    </div>
+    
+    <section class="sec3" id="sec3">
+        <div class="rectangle-container" id="rectangle-container">
         </div>
     </section>
 
-
-    <div class="sec2">
-        <h1 class="About-title">About Us</h1>
-        <p class="about-description">
-            A personalized learning platform for 4 - 8 ages with interesting<br />
-            school syllabus contents with quizzes, and interactive games<br />
-            to empower kids to study at their own pace by including<br />
-            Mathematics, English and more subjects.
-        </p>
-        </div>
-        <div class="sec3">
+    <section class="circle_images">
         <img src="Assets/about us assets/calculator.png" class="image" />
         <img src="Assets/about us assets/englishLanguage.png" class="image" />
         <img src="Assets/about us assets/science-research.png" class="image" />
         <img src="Assets/about us assets/laptop-computers.png" class="image" />
         <img src="Assets/about us assets/world-environment-day.png" class="image" />
-        </div>
+    </section>
 
         <div class="contact-container">
-        <h1>Contact Us</h1>
-        <div class="contact-section">
-            <div class="contact-card">
-                <div class="icon"><img src="Assets/about us assets/location.png" alt=""></div>
-                <h3>Tiny Genius<br>children education centre</h3>
-                <p>172/A, Kandy Road,<br>Polgolla</p>
+            <h1>Contact Us</h1>
+            <div class="contact-section">
+                <div class="contact-card">
+                    <div class="icon"><img src="Assets/about us assets/location.png" alt=""></div>
+                    <h3>Tiny Genius<br>children education centre</h3>
+                    <p>172/A, Kandy Road,<br>Polgolla</p>
+                </div>
+                <div class="contact-card">
+                    <div class="icon"><img src="Assets/about us assets/contact us-phone.png" alt=""></div>
+                    <h3>General Inquiries</h3>
+                    <p>+94 71 234 5678</p><br> <br>
+                    <h3>Customer Support Hotline</h3>
+                    <p>+94 71 876 5432</p>
+                </div>
+                <div class="contact-card">
+                    <div class="icon"><img src="Assets/about us assets/èmail.png" alt=""></div>
+                    <h3>General Queries</h3>
+                    <p>contact@tinygenius.com</p><br><br>
+                    <h3>Support Team</h3>
+                    <p>support@tinygenius.com</p><br><br>
+                    <h3>Partnership Opportunities</h3>
+                    <p>partnerships@tinygenius.com</p>
+                </div>
             </div>
-            <div class="contact-card">
-                <div class="icon"><img src="Assets/about us assets/contact us-phone.png" alt=""></div>
-                <h3>General Inquiries</h3>
-                <p>+94 71 234 5678</p><br> <br>
-                <h3>Customer Support Hotline</h3>
-                <p>+94 71 876 5432</p>
-            </div>
-            <div class="contact-card">
-                <div class="icon"><img src="Assets/about us assets/èmail.png" alt=""></div>
-                <h3>General Queries</h3>
-                <p>contact@tinygenius.com</p><br><br>
-                <h3>Support Team</h3>
-                <p>support@tinygenius.com</p><br><br>
-                <h3>Partnership Opportunities</h3>
-                <p>partnerships@tinygenius.com</p>
-            </div>
-        </div>
-    </div>
 
-    <h2 class="About-title">Message Us</h2>
-
-    <form class="contact-form" action="http://localhost/process_message.php" method="POST">
-    <label for="name" class="form-label">Your Name</label>
-    <input type="text" id="name" name="name" class="form-input" placeholder="Full Name" required />
-
-    <label for="email" class="form-label">Your Email</label>
-    <input type="email" id="email" name="email" class="form-input" placeholder="Email Address" required />
-
-    <label for="subject" class="form-label">Subject</label>
-    <input type="text" id="subject" name="subject" class="form-input" placeholder="Subject" required />
-
-    <label for="message" class="form-label">Your Message</label>
-    <textarea id="message" name="message" class="form-textarea" placeholder="Message" required></textarea>
-
-    <button type="submit" class="submit-btn">Send Message</button>
-    </form>
-
-
-    <h2 class="team-title">Developers Behind Tiny Genius</h2>
-
-    <div class="team-grid">
-        <div class="team-row">
-        <div class="team-col">
-            <div class="team-member">
-            <div class="member-photo" role="img" aria-label="Photo of Amany"></div>
-            <h3 class="member-name">Amany</h3>
-            <p class="member-role">Developer</p>
-            <div class="socialmedia">
-                <a href="" target="_blank"><img src="Assets/about us assets/gmail.png" alt=""></a>
-                <a href="https://instagram.com" target="_blank"><img src="Assets/about us assets/InstagramSmall.png" alt=""></a>
-                <a href="" target="_blank"><img src="Assets/about us assets/Github.png" alt=""></a>
+            <div class="form-container">
+                <h2 class="About-title">Message Us</h2>
+                <form class="contact-form" action="http://localhost/process_message.php" method="POST">
+                <label for="name" class="form-label">Your Name</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Full Name" required >
+            
+                <label for="email" class="form-label">Your Email</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="Email Address" required />
+            
+                <label for="subject" class="form-label">Subject</label>
+                <input type="text" id="subject" name="subject" class="form-input" placeholder="Subject" required >
+            
+                <label for="message" class="form-label">Your Message</label>
+                <textarea id="message" name="message" class="form-textarea" placeholder="Message" required></textarea>
+            
+                <button type="submit" class="submit-btn">Send Message</button>
+                </form>
             </div>
             </div>
-        </div>
+
+    
+    
+     <section class="sec4">
+        <h2 class="team-title">Developers Behind Tiny Genius</h2>
+        <div class="team-grid">
+            <div class="team-row">
+                <div class="team-col">
+                    <div class="team-member">
+                        <div class="member-photo" role="img" aria-label="Photo of Amany"></div>
+                        <h3 class="member-name">Amany</h3>
+                        <p class="member-role">Developer</p>
+                        <div class="socialmedia">
+                            <a href="" target="_blank"><img src="Assets/about us assets/gmail.png" alt=""></a>
+                            <a href="https://instagram.com" target="_blank"><img src="Assets/about us assets/InstagramSmall.png" alt=""></a>
+                            <a href="" target="_blank"><img src="Assets/about us assets/Github.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
         <div class="team-col">
             <div class="team-member">
             <div class="member-photo" role="img" aria-label="Photo of Farha"></div>
@@ -164,7 +173,7 @@ $user_id = $_SESSION['user_id'];
         </div>
         </div>
     </div>
-
+    </section>
     
 
     <footer class="footer">
@@ -186,9 +195,7 @@ $user_id = $_SESSION['user_id'];
             </a>
         </div>
     </footer>
-    <script src ="nav.js"></script>
-    
-        
+    <script src="nav.js"></script>
+
 </body>
 </html>
-
