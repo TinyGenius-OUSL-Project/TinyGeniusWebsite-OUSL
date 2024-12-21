@@ -11,6 +11,12 @@ if (!isset($_SESSION['user_id'])) {
 
 $user_id = $_SESSION['user_id'];
 
+if (isset($_GET['message'])) {
+    $_SESSION['message'] = $_GET['message']; 
+}
+
+$message = isset($_SESSION['message']) ? $_SESSION['message'] : ''; // Retrieve the message from session
+unset($_SESSION['message']); 
 ?>
 
 
@@ -34,7 +40,8 @@ $user_id = $_SESSION['user_id'];
 <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 
 
-<title>Tiny Genius</title>
+<title>Tiny Genius</title>     
+    
 </head>
 <body data-user-id="<?php echo $user_id; ?>">
     <div class="grade-btns">
@@ -99,7 +106,7 @@ $user_id = $_SESSION['user_id'];
 
             <div class="form-container">
                 <h2 class="About-title">Message Us</h2>
-                <form class="contact-form" action="http://localhost/process_message.php" method="POST">
+                <form class="contact-form" action="process_message.php" method="POST">
                 <label for="name" class="form-label">Your Name</label>
                 <input type="text" id="name" name="name" class="form-input" placeholder="Full Name" required >
             
@@ -174,7 +181,15 @@ $user_id = $_SESSION['user_id'];
         </div>
     </div>
     </section>
-    
+
+    <!-- Popup content -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <p id="popupMessage"><?php echo htmlspecialchars($message); ?></p>
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
 
     <footer class="footer">
         <div class="footer-logo">
@@ -196,6 +211,19 @@ $user_id = $_SESSION['user_id'];
         </div>
     </footer>
     <script src="nav.js"></script>
+    <script>
+    // Show the popup if the PHP message is not empty
+    <?php if (!empty($message)) { ?>
+        document.getElementById('popup').style.display = 'block'; 
+    <?php } else { ?>
+        console.log('No message to display.'); 
+    <?php } ?>
+
+    // Function to close the popup
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none'; 
+    }
+</script>
 
 </body>
 </html>
