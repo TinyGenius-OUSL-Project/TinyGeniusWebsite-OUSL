@@ -40,13 +40,18 @@ $user_id = $_SESSION['user_id'];
                 <option value="maths">Maths</option>
                 <option value="ict">ICT</option>
             </select>
+
+
         </div>
 
         <div class="content">
+            <!-- Printable section -->
             <div id="recent-activities">
                 <!-- Activities will be dynamically inserted here -->
-            </div>
         </div>
+                <!-- Add Print Button -->
+                    <button id="print-btn">Print Scores as PDF</button>
+    </div>
     </div>
 
     <script>
@@ -116,6 +121,27 @@ $user_id = $_SESSION['user_id'];
             const selectedSubject = this.value;
             showScore(selectedSubject); // Show scores for the selected subject
         });
+        // Print scores as PDF
+    document.getElementById('print-btn').addEventListener('click', function() {
+        const printContent = document.getElementById('recent-activities').innerHTML;
+        const originalContent = document.body.innerHTML;
+        document.body.innerHTML = `
+            <html>
+            <head>
+                <title>Track Progress-Quiz Scores</title>
+                <link rel="stylesheet" href="trackProgress.css">
+                <link rel="stylesheet" href="nav.css">
+            </head>
+            <body>
+                <h1>Quiz Scores</h1>
+                ${printContent}
+            </body>
+            </html>
+        `;
+        window.print();
+        document.body.innerHTML = originalContent;
+        window.location.reload(); // Reload the page to restore original state
+    });
     </script>
     <script src="nav.js"></script>
 </body>
