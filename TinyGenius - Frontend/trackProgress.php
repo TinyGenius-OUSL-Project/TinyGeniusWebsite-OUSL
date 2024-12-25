@@ -33,14 +33,15 @@ $user_id = $_SESSION['user_id'];
     <div class="container">
         <!-- Subject Filter Dropdown -->
         <div class="filter-container">
-            <label for="subjectFilter">Quiz Marks Filter by Subjects </label>
+            <label for="subjectFilter"><h1>Quiz Marks Filter by Subjects</h1> </label><br><br>
             <select id="subjectFilter">
                 <option value="all">All Subjects</option>
                 <option value="english">English</option>
                 <option value="maths">Maths</option>
                 <option value="ict">ICT</option>
             </select>
-
+            <!-- Add Print Button -->
+            <button id="print-btn" style="background-color:#6FA7B3; color: white; border: none; padding: 1rem 3.5rem; font-size: 1rem; font-weight: bold; cursor: pointer; border-radius: 50px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);">Print Scores as PDF</button>
 
         </div>
 
@@ -49,8 +50,8 @@ $user_id = $_SESSION['user_id'];
             <div id="recent-activities">
                 <!-- Activities will be dynamically inserted here -->
         </div>
-                <!-- Add Print Button -->
-                    <button id="print-btn">Print Scores as PDF</button>
+                
+
     </div>
     </div>
 
