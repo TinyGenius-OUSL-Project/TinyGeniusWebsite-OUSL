@@ -6,21 +6,20 @@
     <title>Game - TinyGenius</title>
     <link rel="stylesheet" href="subject.css">
     <style>
-        /* Ensure the body and html take up the full height of the screen */
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
         }
 
-        /* Set up the flexbox container for the main content */
+        /* flex box container */
         main {
             display: flex;
             flex-direction: column;
             height: 100%;
         }
 
-        /* Ensure the iframe container takes the rest of the space */
+        /* embedded game taking the rest of the space?!*/
         .game-container {
             flex: 1;
             display: flex;
@@ -54,7 +53,7 @@
     </main>
 
     <script>
-        // Function to adjust iframe height based on viewport and nav bar height
+        // Adjusting iframe height based on viewport and nav bar height
         function adjustIframeHeight() {
             const navbarHeight = document.querySelector('nav').offsetHeight;
             const iframe = document.getElementById('gameIframe');
@@ -67,10 +66,10 @@
         // Call the function initially to set the iframe height
         adjustIframeHeight();
 
-        // Also adjust iframe height when the window is resized
+        // iframe height adjustment
         window.addEventListener('resize', adjustIframeHeight);
 
-        // Get the game URL from the query parameter and load it into the iframe
+        // loading game url into iframe
         const urlParams = new URLSearchParams(window.location.search);
         const gameUrl = urlParams.get('gameUrl');
         const gameIframe = document.getElementById('gameIframe');
