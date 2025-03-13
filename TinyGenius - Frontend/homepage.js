@@ -1,10 +1,13 @@
 import contentData from './content.js';
 
+// fetching unlocked subjects for specific grade from server
 async function fetchSelectedSubjects(grade, userId) {
     try {
+        // send fetch request and get json response
         const response = await fetch(`save_selections.php?grade=${grade}&user_id=${userId}`);
         const data = await response.json();
 
+        // check if we successfully retrieved unlocked sub list and return them if there is no errors
         if (data.success && data.selections && data.selections.subjects) {
             return data.selections.subjects;
         } else {
@@ -17,6 +20,7 @@ async function fetchSelectedSubjects(grade, userId) {
     }
 }
 
+// dropdown menu visibility when clicked
 function toggleDropdown(id) {
     const dropdown = document.getElementById(id);
     if (dropdown.style.display === "block") {
@@ -26,38 +30,40 @@ function toggleDropdown(id) {
     }
 }
 
+
+
+// respective ui update according to subject selection
 contentData.gradeButtons.forEach((button) => {
     button.addEventListener('click', async () => {
+        // detect the clicked buttons acc to specific user id
         const grade = button.getAttribute('data-grade');
         const isActive = button.classList.contains('active');
-
-        const currentUserId = document.body.dataset.userId; // Ensure this is included in HTML
+        const currentUserId = document.body.dataset.userId; 
         if (!currentUserId) {
             console.error('User ID is missing. Please check server-side integration.');
             return;
         }
 
+        // locking subjects according to selections
         if (isActive) {
             button.classList.remove('active');
-            contentData.rectangleContainer.innerHTML = ''; // Clear the rectangles
+            contentData.rectangleContainer.innerHTML = ''; 
         } else {
-            contentData.gradeButtons.forEach(b => b.classList.remove('active')); // Remove active class from all buttons
-            button.classList.add('active'); // Add active class to the clicked button
+            // all subjects shows as locked during first login
+            contentData.gradeButtons.forEach(b => b.classList.remove('active')); 
+            button.classList.add('active'); 
 
-            contentData.rectangleContainer.innerHTML = ''; // Clear the previous subjects
+            contentData.rectangleContainer.innerHTML = ''; 
 
-            // Fetch the selected subjects for the current grade from the server
+            // fetch unlocked subs from server
             const selectedSubjectsForGrade = await fetchSelectedSubjects(grade, currentUserId);
-
-            // Get the full list of subjects for the selected grade
             const subjects = contentData.gradeContent[grade];
-
-            // Only show the selected subjects for the current grade
             const filteredSubjects = subjects.map((subject) => ({
                 ...subject,
                 unlocked: selectedSubjectsForGrade.includes(subject.subject)
             }));
 
+            //ui update
             filteredSubjects.forEach((subject) => {
                 const rectangle = document.createElement('div');
                 rectangle.classList.add('rectangle');
